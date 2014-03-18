@@ -24,6 +24,11 @@
     // Present the view controller
     //
     [self.frostedViewController presentMenuViewController];
+    
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    
 }
 
 @end

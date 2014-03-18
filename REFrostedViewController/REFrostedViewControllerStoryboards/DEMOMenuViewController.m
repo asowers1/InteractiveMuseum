@@ -12,8 +12,20 @@
 #import "UIViewController+REFrostedViewController.h"
 #import "DEMONavigationController.h"
 
-@interface DEMOMenuViewController ()
 
+#import "CHTCollectionViewWaterfallCell.h"
+#import "CHTCollectionViewWaterfallHeader.h"
+#import "CHTCollectionViewWaterfallFooter.h"
+
+#define CELL_COUNT 30
+#define CELL_IDENTIFIER @"WaterfallCell"
+#define HEADER_IDENTIFIER @"WaterfallHeader"
+#define FOOTER_IDENTIFIER @"WaterfallFooter"
+
+
+
+@interface DEMOMenuViewController ()
+@property (nonatomic, strong) NSMutableArray *cellSizes;
 @end
 
 @implementation DEMOMenuViewController
@@ -31,7 +43,7 @@
         UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 184.0f)];
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 40, 100, 100)];
         imageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
-        imageView.image = [UIImage imageNamed:@"avatar.jpg"];
+        imageView.image = [UIImage imageNamed:@"Object1.png"];
         imageView.layer.masksToBounds = YES;
         imageView.layer.cornerRadius = 50.0;
         imageView.layer.borderColor = [UIColor whiteColor].CGColor;
@@ -41,7 +53,7 @@
         imageView.clipsToBounds = YES;
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 0, 24)];
-        label.text = @"Roman Efimov";
+        label.text = @"My Memoir";
         label.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
         label.backgroundColor = [UIColor clearColor];
         label.textColor = [UIColor colorWithRed:62/255.0f green:68/255.0f blue:75/255.0f alpha:1.0f];
@@ -73,7 +85,7 @@
     view.backgroundColor = [UIColor colorWithRed:167/255.0f green:167/255.0f blue:167/255.0f alpha:0.6f];
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 8, 0, 0)];
-    label.text = @"Friends Online";
+    label.text = @"Saved items";
     label.font = [UIFont systemFontOfSize:15];
     label.textColor = [UIColor whiteColor];
     label.backgroundColor = [UIColor clearColor];
@@ -113,7 +125,13 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 54;
+
+    if (indexPath.section==0) {
+        return 54;
+    }else if(indexPath.section==1){
+        return 300;
+    }
+    else return 0;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -123,7 +141,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
-    return 3;
+    if (sectionIndex==0) {
+        return 2;
+    }else if(sectionIndex==1){
+        return 1;
+    }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -137,14 +160,105 @@
     }
     
     if (indexPath.section == 0) {
-        NSArray *titles = @[@"Home", @"Profile", @"Chats"];
+        NSArray *titles = @[@"Home", @"Profile"];
         cell.textLabel.text = titles[indexPath.row];
-    } else {
-        NSArray *titles = @[@"John Appleseed", @"John Doe", @"Test User"];
-        cell.textLabel.text = titles[indexPath.row];
+    }
+    else if(indexPath.section == 1){
+        cell.contentView.translatesAutoresizingMaskIntoConstraints = NO;
+        [cell.contentView addSubview:self.collectionView];
     }
     
     return cell;
 }
- 
+
+
+#pragma mark - Accessors
+
+- (UICollectionView *)collectionView {
+    if (!_collectionView) {
+        CHTCollectionViewWaterfallLayout *layout = [[CHTCollectionViewWaterfallLayout alloc] init];
+        
+        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
+        layout.headerHeight = 15;
+        layout.footerHeight = 10;
+        layout.minimumColumnSpacing = 20;
+        layout.minimumInteritemSpacing = 30;
+        
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+        _collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+        _collectionView.dataSource = self;
+        _collectionView.delegate = self;
+        _collectionView.backgroundColor = [UIColor whiteColor];
+        [_collectionView registerClass:[CHTCollectionViewWaterfallCell class]
+            forCellWithReuseIdentifier:CELL_IDENTIFIER];
+        [_collectionView registerClass:[CHTCollectionViewWaterfallHeader class]
+            forSupplementaryViewOfKind:CHTCollectionElementKindSectionHeader
+                   withReuseIdentifier:HEADER_IDENTIFIER];
+        [_collectionView registerClass:[CHTCollectionViewWaterfallFooter class]
+            forSupplementaryViewOfKind:CHTCollectionElementKindSectionFooter
+                   withReuseIdentifier:FOOTER_IDENTIFIER];
+    }
+    return _collectionView;
+}
+
+- (NSMutableArray *)cellSizes {
+    if (!_cellSizes) {
+        _cellSizes = [NSMutableArray array];
+        for (NSInteger i = 0; i < CELL_COUNT; i++) {
+            CGSize size = CGSizeMake(arc4random() % 50 + 50, arc4random() % 50 + 50);
+            _cellSizes[i] = [NSValue valueWithCGSize:size];
+        }
+    }
+    return _cellSizes;
+}
+
+#pragma mark - Life Cycle
+
+- (void)dealloc {
+    _collectionView.delegate = nil;
+    _collectionView.dataSource = nil;
+}
+
+#pragma mark - UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return CELL_COUNT;
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
+    return 2;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    CHTCollectionViewWaterfallCell *cell =
+    (CHTCollectionViewWaterfallCell *)[collectionView dequeueReusableCellWithReuseIdentifier:CELL_IDENTIFIER
+                                                                                forIndexPath:indexPath];
+    cell.displayString = [NSString stringWithFormat:@"%ld", (long)indexPath.item];
+    return cell;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    UICollectionReusableView *reusableView = nil;
+    
+    if ([kind isEqualToString:CHTCollectionElementKindSectionHeader]) {
+        reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+                                                          withReuseIdentifier:HEADER_IDENTIFIER
+                                                                 forIndexPath:indexPath];
+    } else if ([kind isEqualToString:CHTCollectionElementKindSectionFooter]) {
+        reusableView = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+                                                          withReuseIdentifier:FOOTER_IDENTIFIER
+                                                                 forIndexPath:indexPath];
+    }
+    
+    return reusableView;
+}
+
+
+
+#pragma mark - CHTCollectionViewDelegateWaterfallLayout
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+   return [self.cellSizes[indexPath.item] CGSizeValue];
+}
+
+
 @end

@@ -21,6 +21,10 @@
 		492AB6DE18D7A0F8001B9559 /* DEMORootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB6CE18D7A0F8001B9559 /* DEMORootViewController.m */; };
 		492AB6DF18D7A0F8001B9559 /* DEMOSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB6D018D7A0F8001B9559 /* DEMOSecondViewController.m */; };
 		492AB6E518D7B8ED001B9559 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 492AB6E418D7B8ED001B9559 /* Images.xcassets */; };
+		492AB72318D7CBD9001B9559 /* CHTCollectionViewWaterfallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB71E18D7CBD9001B9559 /* CHTCollectionViewWaterfallCell.m */; };
+		492AB72418D7CBD9001B9559 /* CHTCollectionViewWaterfallHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB72018D7CBD9001B9559 /* CHTCollectionViewWaterfallHeader.m */; };
+		492AB72518D7CBD9001B9559 /* CHTCollectionViewWaterfallFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB72218D7CBD9001B9559 /* CHTCollectionViewWaterfallFooter.m */; };
+		492AB72818D7CC8B001B9559 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB72718D7CC8B001B9559 /* CHTCollectionViewWaterfallLayout.m */; };
 		49FED29818D79129004BE4E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29718D79129004BE4E0 /* Foundation.framework */; };
 		49FED29A18D79129004BE4E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29918D79129004BE4E0 /* CoreGraphics.framework */; };
 		49FED29C18D79129004BE4E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29B18D79129004BE4E0 /* UIKit.framework */; };
@@ -73,6 +77,14 @@
 		492AB6CF18D7A0F8001B9559 /* DEMOSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOSecondViewController.h; sourceTree = "<group>"; };
 		492AB6D018D7A0F8001B9559 /* DEMOSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOSecondViewController.m; sourceTree = "<group>"; };
 		492AB6E418D7B8ED001B9559 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		492AB71D18D7CBD9001B9559 /* CHTCollectionViewWaterfallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallCell.h; sourceTree = "<group>"; };
+		492AB71E18D7CBD9001B9559 /* CHTCollectionViewWaterfallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallCell.m; sourceTree = "<group>"; };
+		492AB71F18D7CBD9001B9559 /* CHTCollectionViewWaterfallHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallHeader.h; sourceTree = "<group>"; };
+		492AB72018D7CBD9001B9559 /* CHTCollectionViewWaterfallHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallHeader.m; sourceTree = "<group>"; };
+		492AB72118D7CBD9001B9559 /* CHTCollectionViewWaterfallFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallFooter.h; sourceTree = "<group>"; };
+		492AB72218D7CBD9001B9559 /* CHTCollectionViewWaterfallFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallFooter.m; sourceTree = "<group>"; };
+		492AB72618D7CC8B001B9559 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
+		492AB72718D7CC8B001B9559 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
 		49FED29418D79129004BE4E0 /* InteractiveMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49FED29718D79129004BE4E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49FED29918D79129004BE4E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -139,6 +151,14 @@
 		492AB6BF18D7A0F8001B9559 /* REFrostedViewControllerStoryboards */ = {
 			isa = PBXGroup;
 			children = (
+				492AB72618D7CC8B001B9559 /* CHTCollectionViewWaterfallLayout.h */,
+				492AB72718D7CC8B001B9559 /* CHTCollectionViewWaterfallLayout.m */,
+				492AB71D18D7CBD9001B9559 /* CHTCollectionViewWaterfallCell.h */,
+				492AB71E18D7CBD9001B9559 /* CHTCollectionViewWaterfallCell.m */,
+				492AB71F18D7CBD9001B9559 /* CHTCollectionViewWaterfallHeader.h */,
+				492AB72018D7CBD9001B9559 /* CHTCollectionViewWaterfallHeader.m */,
+				492AB72118D7CBD9001B9559 /* CHTCollectionViewWaterfallFooter.h */,
+				492AB72218D7CBD9001B9559 /* CHTCollectionViewWaterfallFooter.m */,
 				492AB6C518D7A0F8001B9559 /* DEMOAppDelegate.h */,
 				492AB6C618D7A0F8001B9559 /* DEMOAppDelegate.m */,
 				492AB6C718D7A0F8001B9559 /* DEMOHomeViewController.h */,
@@ -332,11 +352,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				492AB6BE18D79FFF001B9559 /* UIViewController+REFrostedViewController.m in Sources */,
+				492AB72818D7CC8B001B9559 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				492AB6BD18D79FFF001B9559 /* UIView+REFrostedViewController.m in Sources */,
 				492AB6BA18D79FFF001B9559 /* REFrostedContainerViewController.m in Sources */,
 				49FED2A818D79129004BE4E0 /* IMAppDelegate.m in Sources */,
 				492AB6BC18D79FFF001B9559 /* UIImage+REFrostedViewController.m in Sources */,
 				49FED2A418D79129004BE4E0 /* main.m in Sources */,
+				492AB72418D7CBD9001B9559 /* CHTCollectionViewWaterfallHeader.m in Sources */,
+				492AB72518D7CBD9001B9559 /* CHTCollectionViewWaterfallFooter.m in Sources */,
+				492AB72318D7CBD9001B9559 /* CHTCollectionViewWaterfallCell.m in Sources */,
 				492AB6DD18D7A0F8001B9559 /* DEMONavigationController.m in Sources */,
 				492AB6DE18D7A0F8001B9559 /* DEMORootViewController.m in Sources */,
 				492AB6B918D79FFF001B9559 /* RECommonFunctions.m in Sources */,
@@ -484,6 +508,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InteractiveMuseum/InteractiveMuseum-Prefix.pch";
 				INFOPLIST_FILE = "InteractiveMuseum/InteractiveMuseum-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -497,6 +522,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InteractiveMuseum/InteractiveMuseum-Prefix.pch";
 				INFOPLIST_FILE = "InteractiveMuseum/InteractiveMuseum-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

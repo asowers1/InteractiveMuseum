@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "REFrostedViewController.h"
-
-@interface DEMOMenuViewController : UITableViewController
-
+#import "CHTCollectionViewWaterfallLayout.h"
+@interface DEMOMenuViewController : UITableViewController <UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout>
+@property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 @end
