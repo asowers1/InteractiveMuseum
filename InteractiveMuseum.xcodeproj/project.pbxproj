@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		492AB6AB18D79FA3001B9559 /* avatar@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 492AB6AA18D79FA3001B9559 /* avatar@2x.jpg */; };
+		492AB6B918D79FFF001B9559 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB6AE18D79FFF001B9559 /* RECommonFunctions.m */; };
+		492AB6BA18D79FFF001B9559 /* REFrostedContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB6B018D79FFF001B9559 /* REFrostedContainerViewController.m */; };
+		492AB6BB18D79FFF001B9559 /* REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB6B218D79FFF001B9559 /* REFrostedViewController.m */; };
+		492AB6BC18D79FFF001B9559 /* UIImage+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB6B418D79FFF001B9559 /* UIImage+REFrostedViewController.m */; };
+		492AB6BD18D79FFF001B9559 /* UIView+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB6B618D79FFF001B9559 /* UIView+REFrostedViewController.m */; };
+		492AB6BE18D79FFF001B9559 /* UIViewController+REFrostedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB6B818D79FFF001B9559 /* UIViewController+REFrostedViewController.m */; };
+		492AB6DA18D7A0F8001B9559 /* DEMOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB6C618D7A0F8001B9559 /* DEMOAppDelegate.m */; };
+		492AB6DB18D7A0F8001B9559 /* DEMOHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB6C818D7A0F8001B9559 /* DEMOHomeViewController.m */; };
+		492AB6DC18D7A0F8001B9559 /* DEMOMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB6CA18D7A0F8001B9559 /* DEMOMenuViewController.m */; };
+		492AB6DD18D7A0F8001B9559 /* DEMONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB6CC18D7A0F8001B9559 /* DEMONavigationController.m */; };
+		492AB6DE18D7A0F8001B9559 /* DEMORootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB6CE18D7A0F8001B9559 /* DEMORootViewController.m */; };
+		492AB6DF18D7A0F8001B9559 /* DEMOSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB6D018D7A0F8001B9559 /* DEMOSecondViewController.m */; };
+		492AB6E518D7B8ED001B9559 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 492AB6E418D7B8ED001B9559 /* Images.xcassets */; };
 		49FED29818D79129004BE4E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29718D79129004BE4E0 /* Foundation.framework */; };
 		49FED29A18D79129004BE4E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29918D79129004BE4E0 /* CoreGraphics.framework */; };
 		49FED29C18D79129004BE4E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29B18D79129004BE4E0 /* UIKit.framework */; };
@@ -15,8 +29,6 @@
 		49FED2A818D79129004BE4E0 /* IMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FED2A718D79129004BE4E0 /* IMAppDelegate.m */; };
 		49FED2AB18D79129004BE4E0 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49FED2A918D79129004BE4E0 /* Main_iPhone.storyboard */; };
 		49FED2AE18D79129004BE4E0 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49FED2AC18D79129004BE4E0 /* Main_iPad.storyboard */; };
-		49FED2B118D79129004BE4E0 /* IMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FED2B018D79129004BE4E0 /* IMViewController.m */; };
-		49FED2B318D79129004BE4E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49FED2B218D79129004BE4E0 /* Images.xcassets */; };
 		49FED2BA18D79129004BE4E0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED2B918D79129004BE4E0 /* XCTest.framework */; };
 		49FED2BB18D79129004BE4E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29718D79129004BE4E0 /* Foundation.framework */; };
 		49FED2BC18D79129004BE4E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29B18D79129004BE4E0 /* UIKit.framework */; };
@@ -35,6 +47,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		492AB6AA18D79FA3001B9559 /* avatar@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "avatar@2x.jpg"; path = "../../InteractiveMuseum/avatar@2x.jpg"; sourceTree = "<group>"; };
+		492AB6AD18D79FFF001B9559 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		492AB6AE18D79FFF001B9559 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		492AB6AF18D79FFF001B9559 /* REFrostedContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFrostedContainerViewController.h; sourceTree = "<group>"; };
+		492AB6B018D79FFF001B9559 /* REFrostedContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REFrostedContainerViewController.m; sourceTree = "<group>"; };
+		492AB6B118D79FFF001B9559 /* REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = REFrostedViewController.h; sourceTree = "<group>"; };
+		492AB6B218D79FFF001B9559 /* REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = REFrostedViewController.m; sourceTree = "<group>"; };
+		492AB6B318D79FFF001B9559 /* UIImage+REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+REFrostedViewController.h"; sourceTree = "<group>"; };
+		492AB6B418D79FFF001B9559 /* UIImage+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+REFrostedViewController.m"; sourceTree = "<group>"; };
+		492AB6B518D79FFF001B9559 /* UIView+REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+REFrostedViewController.h"; sourceTree = "<group>"; };
+		492AB6B618D79FFF001B9559 /* UIView+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+REFrostedViewController.m"; sourceTree = "<group>"; };
+		492AB6B718D79FFF001B9559 /* UIViewController+REFrostedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+REFrostedViewController.h"; sourceTree = "<group>"; };
+		492AB6B818D79FFF001B9559 /* UIViewController+REFrostedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+REFrostedViewController.m"; sourceTree = "<group>"; };
+		492AB6C518D7A0F8001B9559 /* DEMOAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOAppDelegate.h; sourceTree = "<group>"; };
+		492AB6C618D7A0F8001B9559 /* DEMOAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOAppDelegate.m; sourceTree = "<group>"; };
+		492AB6C718D7A0F8001B9559 /* DEMOHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOHomeViewController.h; sourceTree = "<group>"; };
+		492AB6C818D7A0F8001B9559 /* DEMOHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOHomeViewController.m; sourceTree = "<group>"; };
+		492AB6C918D7A0F8001B9559 /* DEMOMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOMenuViewController.h; sourceTree = "<group>"; };
+		492AB6CA18D7A0F8001B9559 /* DEMOMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOMenuViewController.m; sourceTree = "<group>"; };
+		492AB6CB18D7A0F8001B9559 /* DEMONavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMONavigationController.h; sourceTree = "<group>"; };
+		492AB6CC18D7A0F8001B9559 /* DEMONavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMONavigationController.m; sourceTree = "<group>"; };
+		492AB6CD18D7A0F8001B9559 /* DEMORootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMORootViewController.h; sourceTree = "<group>"; };
+		492AB6CE18D7A0F8001B9559 /* DEMORootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMORootViewController.m; sourceTree = "<group>"; };
+		492AB6CF18D7A0F8001B9559 /* DEMOSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DEMOSecondViewController.h; sourceTree = "<group>"; };
+		492AB6D018D7A0F8001B9559 /* DEMOSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DEMOSecondViewController.m; sourceTree = "<group>"; };
+		492AB6E418D7B8ED001B9559 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		49FED29418D79129004BE4E0 /* InteractiveMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49FED29718D79129004BE4E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49FED29918D79129004BE4E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -43,13 +81,10 @@
 		49FED2A118D79129004BE4E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49FED2A318D79129004BE4E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		49FED2A518D79129004BE4E0 /* InteractiveMuseum-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InteractiveMuseum-Prefix.pch"; sourceTree = "<group>"; };
-		49FED2A618D79129004BE4E0 /* IMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMAppDelegate.h; sourceTree = "<group>"; };
-		49FED2A718D79129004BE4E0 /* IMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMAppDelegate.m; sourceTree = "<group>"; };
+		49FED2A618D79129004BE4E0 /* IMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IMAppDelegate.h; path = ../../InteractiveMuseum/IMAppDelegate.h; sourceTree = "<group>"; };
+		49FED2A718D79129004BE4E0 /* IMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IMAppDelegate.m; path = ../../InteractiveMuseum/IMAppDelegate.m; sourceTree = "<group>"; };
 		49FED2AA18D79129004BE4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		49FED2AD18D79129004BE4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		49FED2AF18D79129004BE4E0 /* IMViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMViewController.h; sourceTree = "<group>"; };
-		49FED2B018D79129004BE4E0 /* IMViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMViewController.m; sourceTree = "<group>"; };
-		49FED2B218D79129004BE4E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		49FED2B818D79129004BE4E0 /* InteractiveMuseumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InteractiveMuseumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49FED2B918D79129004BE4E0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		49FED2C118D79129004BE4E0 /* InteractiveMuseumTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InteractiveMuseumTests-Info.plist"; sourceTree = "<group>"; };
@@ -81,6 +116,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		492AB6AC18D79FFF001B9559 /* REFrostedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				492AB6AD18D79FFF001B9559 /* RECommonFunctions.h */,
+				492AB6AE18D79FFF001B9559 /* RECommonFunctions.m */,
+				492AB6AF18D79FFF001B9559 /* REFrostedContainerViewController.h */,
+				492AB6B018D79FFF001B9559 /* REFrostedContainerViewController.m */,
+				492AB6B118D79FFF001B9559 /* REFrostedViewController.h */,
+				492AB6B218D79FFF001B9559 /* REFrostedViewController.m */,
+				492AB6B318D79FFF001B9559 /* UIImage+REFrostedViewController.h */,
+				492AB6B418D79FFF001B9559 /* UIImage+REFrostedViewController.m */,
+				492AB6B518D79FFF001B9559 /* UIView+REFrostedViewController.h */,
+				492AB6B618D79FFF001B9559 /* UIView+REFrostedViewController.m */,
+				492AB6B718D79FFF001B9559 /* UIViewController+REFrostedViewController.h */,
+				492AB6B818D79FFF001B9559 /* UIViewController+REFrostedViewController.m */,
+			);
+			name = REFrostedViewController;
+			path = ../REFrostedViewController;
+			sourceTree = "<group>";
+		};
+		492AB6BF18D7A0F8001B9559 /* REFrostedViewControllerStoryboards */ = {
+			isa = PBXGroup;
+			children = (
+				492AB6C518D7A0F8001B9559 /* DEMOAppDelegate.h */,
+				492AB6C618D7A0F8001B9559 /* DEMOAppDelegate.m */,
+				492AB6C718D7A0F8001B9559 /* DEMOHomeViewController.h */,
+				492AB6C818D7A0F8001B9559 /* DEMOHomeViewController.m */,
+				492AB6C918D7A0F8001B9559 /* DEMOMenuViewController.h */,
+				492AB6CA18D7A0F8001B9559 /* DEMOMenuViewController.m */,
+				492AB6CB18D7A0F8001B9559 /* DEMONavigationController.h */,
+				492AB6CC18D7A0F8001B9559 /* DEMONavigationController.m */,
+				492AB6CD18D7A0F8001B9559 /* DEMORootViewController.h */,
+				492AB6CE18D7A0F8001B9559 /* DEMORootViewController.m */,
+				492AB6CF18D7A0F8001B9559 /* DEMOSecondViewController.h */,
+				492AB6D018D7A0F8001B9559 /* DEMOSecondViewController.m */,
+				49FED2A618D79129004BE4E0 /* IMAppDelegate.h */,
+				49FED2A718D79129004BE4E0 /* IMAppDelegate.m */,
+				49FED2A918D79129004BE4E0 /* Main_iPhone.storyboard */,
+				49FED2AC18D79129004BE4E0 /* Main_iPad.storyboard */,
+				492AB6E418D7B8ED001B9559 /* Images.xcassets */,
+				492AB6AA18D79FA3001B9559 /* avatar@2x.jpg */,
+			);
+			name = REFrostedViewControllerStoryboards;
+			path = ../REFrostedViewController/REFrostedViewControllerStoryboards;
+			sourceTree = "<group>";
+		};
 		49FED28B18D79129004BE4E0 = {
 			isa = PBXGroup;
 			children = (
@@ -114,13 +195,8 @@
 		49FED29D18D79129004BE4E0 /* InteractiveMuseum */ = {
 			isa = PBXGroup;
 			children = (
-				49FED2A618D79129004BE4E0 /* IMAppDelegate.h */,
-				49FED2A718D79129004BE4E0 /* IMAppDelegate.m */,
-				49FED2A918D79129004BE4E0 /* Main_iPhone.storyboard */,
-				49FED2AC18D79129004BE4E0 /* Main_iPad.storyboard */,
-				49FED2AF18D79129004BE4E0 /* IMViewController.h */,
-				49FED2B018D79129004BE4E0 /* IMViewController.m */,
-				49FED2B218D79129004BE4E0 /* Images.xcassets */,
+				492AB6AC18D79FFF001B9559 /* REFrostedViewController */,
+				492AB6BF18D7A0F8001B9559 /* REFrostedViewControllerStoryboards */,
 				49FED29E18D79129004BE4E0 /* Supporting Files */,
 			);
 			path = InteractiveMuseum;
@@ -232,9 +308,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				492AB6E518D7B8ED001B9559 /* Images.xcassets in Resources */,
 				49FED2AE18D79129004BE4E0 /* Main_iPad.storyboard in Resources */,
-				49FED2B318D79129004BE4E0 /* Images.xcassets in Resources */,
 				49FED2AB18D79129004BE4E0 /* Main_iPhone.storyboard in Resources */,
+				492AB6AB18D79FA3001B9559 /* avatar@2x.jpg in Resources */,
 				49FED2A218D79129004BE4E0 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,9 +331,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				492AB6BE18D79FFF001B9559 /* UIViewController+REFrostedViewController.m in Sources */,
+				492AB6BD18D79FFF001B9559 /* UIView+REFrostedViewController.m in Sources */,
+				492AB6BA18D79FFF001B9559 /* REFrostedContainerViewController.m in Sources */,
 				49FED2A818D79129004BE4E0 /* IMAppDelegate.m in Sources */,
+				492AB6BC18D79FFF001B9559 /* UIImage+REFrostedViewController.m in Sources */,
 				49FED2A418D79129004BE4E0 /* main.m in Sources */,
-				49FED2B118D79129004BE4E0 /* IMViewController.m in Sources */,
+				492AB6DD18D7A0F8001B9559 /* DEMONavigationController.m in Sources */,
+				492AB6DE18D7A0F8001B9559 /* DEMORootViewController.m in Sources */,
+				492AB6B918D79FFF001B9559 /* RECommonFunctions.m in Sources */,
+				492AB6DA18D7A0F8001B9559 /* DEMOAppDelegate.m in Sources */,
+				492AB6DB18D7A0F8001B9559 /* DEMOHomeViewController.m in Sources */,
+				492AB6DF18D7A0F8001B9559 /* DEMOSecondViewController.m in Sources */,
+				492AB6DC18D7A0F8001B9559 /* DEMOMenuViewController.m in Sources */,
+				492AB6BB18D79FFF001B9559 /* REFrostedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +381,7 @@
 				49FED2AA18D79129004BE4E0 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
+			path = ../../InteractiveMuseum;
 			sourceTree = "<group>";
 		};
 		49FED2AC18D79129004BE4E0 /* Main_iPad.storyboard */ = {
@@ -301,6 +390,7 @@
 				49FED2AD18D79129004BE4E0 /* Base */,
 			);
 			name = Main_iPad.storyboard;
+			path = ../../InteractiveMuseum;
 			sourceTree = "<group>";
 		};
 		49FED2C218D79129004BE4E0 /* InfoPlist.strings */ = {
@@ -471,6 +561,7 @@
 				49FED2CB18D79129004BE4E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49FED2CC18D79129004BE4E0 /* Build configuration list for PBXNativeTarget "InteractiveMuseumTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +570,7 @@
 				49FED2CE18D79129004BE4E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
