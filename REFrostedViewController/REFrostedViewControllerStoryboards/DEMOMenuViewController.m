@@ -129,7 +129,7 @@
     if (indexPath.section==0) {
         return 54;
     }else if(indexPath.section==1){
-        return 300;
+        return self.view.bounds.size.height;
     }
     else return 0;
 }
@@ -141,6 +141,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)sectionIndex
 {
+    
     if (sectionIndex==0) {
         return 2;
     }else if(sectionIndex==1){
@@ -161,9 +162,11 @@
     
     if (indexPath.section == 0) {
         NSArray *titles = @[@"Home", @"Profile"];
+        
         cell.textLabel.text = titles[indexPath.row];
     }
     else if(indexPath.section == 1){
+        
         cell.contentView.translatesAutoresizingMaskIntoConstraints = NO;
         [cell.contentView addSubview:self.collectionView];
     }
@@ -178,17 +181,17 @@
     if (!_collectionView) {
         CHTCollectionViewWaterfallLayout *layout = [[CHTCollectionViewWaterfallLayout alloc] init];
         
-        layout.sectionInset = UIEdgeInsetsMake(10, 10, 10, 10);
-        layout.headerHeight = 15;
-        layout.footerHeight = 10;
-        layout.minimumColumnSpacing = 20;
-        layout.minimumInteritemSpacing = 30;
-        
-        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+        layout.sectionInset = UIEdgeInsetsMake(2, 2, 2, 2);
+        layout.headerHeight = 3;
+        layout.footerHeight = 2;
+        layout.minimumColumnSpacing = 5;
+        layout.minimumInteritemSpacing = 8;
+
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.bounds.size.height) collectionViewLayout:layout];
         _collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
-        _collectionView.backgroundColor = [UIColor whiteColor];
+        _collectionView.backgroundColor = [UIColor clearColor];
         [_collectionView registerClass:[CHTCollectionViewWaterfallCell class]
             forCellWithReuseIdentifier:CELL_IDENTIFIER];
         [_collectionView registerClass:[CHTCollectionViewWaterfallHeader class]
