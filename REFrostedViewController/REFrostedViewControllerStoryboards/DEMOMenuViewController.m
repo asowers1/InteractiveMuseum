@@ -17,7 +17,7 @@
 #import "CHTCollectionViewWaterfallHeader.h"
 #import "CHTCollectionViewWaterfallFooter.h"
 
-#define CELL_COUNT 30
+#define CELL_COUNT 20
 #define CELL_IDENTIFIER @"WaterfallCell"
 #define HEADER_IDENTIFIER @"WaterfallHeader"
 #define FOOTER_IDENTIFIER @"WaterfallFooter"
@@ -64,6 +64,7 @@
         [view addSubview:label];
         view;
     });
+
 }
 
 #pragma mark -
@@ -100,7 +101,7 @@
     if (sectionIndex == 0)
         return 0;
     
-    return 34;
+    return 0;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -129,7 +130,7 @@
     if (indexPath.section==0) {
         return 54;
     }else if(indexPath.section==1){
-        return self.view.bounds.size.height;
+        return self.view.bounds.size.height-288;
     }
     else return 0;
 }
@@ -187,10 +188,13 @@
         layout.minimumColumnSpacing = 5;
         layout.minimumInteritemSpacing = 8;
 
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.bounds.size.height) collectionViewLayout:layout];
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, 320, self.view.bounds.size.height-512) collectionViewLayout:layout];
+        _collectionView.clipsToBounds=YES;
         _collectionView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         _collectionView.dataSource = self;
         _collectionView.delegate = self;
+        [_collectionView setShowsHorizontalScrollIndicator:NO];
+        [_collectionView setShowsVerticalScrollIndicator:NO];
         _collectionView.backgroundColor = [UIColor clearColor];
         [_collectionView registerClass:[CHTCollectionViewWaterfallCell class]
             forCellWithReuseIdentifier:CELL_IDENTIFIER];

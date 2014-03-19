@@ -55,13 +55,26 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="tintColor" red="0.0" green="0.5215686559677124" blue="1" alpha="1" colorSpace="deviceRGB"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="wrH-lD-XDg">
-                        <barButtonItem key="leftBarButtonItem" image="retinaTraySmall" id="bIK-yz-PnD">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="retinaTraySmallBlock" id="bIK-yz-PnD">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="showMenu" destination="VcY-P9-Qty" id="Idu-8D-Wwi"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Tpz-w2-XiB">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vt4-6o-Njm">
+                                <rect key="frame" x="264" y="4" width="40" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="cameraButton">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <color key="tintColor" red="0.59999999999999998" green="0.20000000000000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W9x-dk-p3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,7 +135,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="retinaTraySmall" width="32" height="32"/>
+        <image name="cameraButton" width="76" height="63"/>
+        <image name="retinaTraySmallBlock" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

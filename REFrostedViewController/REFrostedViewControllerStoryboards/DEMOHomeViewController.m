@@ -26,4 +26,17 @@
     [self.frostedViewController presentMenuViewController];
 }
 
+-(void)viewDidLoad{
+    UILabel* tlabel=[[UILabel alloc] initWithFrame:CGRectMake(0,0, 300, 40)];
+    tlabel.text=@"Interactive Museum";
+    tlabel.textColor=[UIColor grayColor];
+    tlabel.textAlignment=NSTextAlignmentCenter;
+    tlabel.backgroundColor =[UIColor clearColor];
+    tlabel.font = [UIFont fontWithName:@"Baskerville-Italic" size:24];
+    tlabel.adjustsFontSizeToFitWidth=YES;
+    self.navigationItem.titleView=tlabel;
+    //self.title = @"Interactive Museum";
+    
+}
+
 @end
