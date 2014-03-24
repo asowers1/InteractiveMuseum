@@ -13,7 +13,7 @@
 @end
 
 @implementation MUCameraViewViewController
-@synthesize infoLabel;
+@synthesize infoLabel,infoLabel1;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -35,6 +35,13 @@
     infoLabel.backgroundColor = [UIColor clearColor];
     infoLabel.font = [UIFont fontWithName:@"Baskerville-Italic" size:24];
     infoLabel.adjustsFontSizeToFitWidth=YES;
+    
+    infoLabel1.text = @"A Photo";
+    infoLabel1.textColor = [UIColor grayColor];
+    infoLabel1.textAlignment = NSTextAlignmentCenter;
+    infoLabel1.backgroundColor = [UIColor clearColor];
+    infoLabel1.font = [UIFont fontWithName:@"Baskerville-Italic" size:24];
+    infoLabel1.adjustsFontSizeToFitWidth=YES;
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
         UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"

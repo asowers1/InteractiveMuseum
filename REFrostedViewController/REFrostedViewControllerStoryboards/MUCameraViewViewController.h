@@ -15,6 +15,7 @@
 - (IBAction)takePhoto:  (UIButton *)sender;
 - (IBAction)selectPhoto:(UIButton *)sender;
 @property (strong, nonatomic) IBOutlet UILabel *infoLabel;
+@property (strong, nonatomic) IBOutlet UILabel *infoLabel1;
 
 
 @end
