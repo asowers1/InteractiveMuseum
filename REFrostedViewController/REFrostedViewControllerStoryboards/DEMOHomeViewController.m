@@ -7,14 +7,14 @@
 //
 
 #import "DEMOHomeViewController.h"
-
+#import "MUCameraViewViewController.h"
 @interface DEMOHomeViewController ()
 
 
 @end
 
 @implementation DEMOHomeViewController
-
+@synthesize cameraButton;
 - (IBAction)showMenu
 {
     // Dismiss keyboard (optional)
@@ -37,7 +37,7 @@
     tlabel.adjustsFontSizeToFitWidth=YES;
     self.navigationItem.titleView=tlabel;
     //self.title = @"Interactive Museum";
-    
 }
+
 
 @end

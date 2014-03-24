@@ -10,6 +10,7 @@
 #import "REFrostedViewController.h"
 
 @interface DEMOHomeViewController : UIViewController
+@property (strong, nonatomic) IBOutlet UINavigationItem *cameraButton;
 
 - (IBAction)showMenu;
 
