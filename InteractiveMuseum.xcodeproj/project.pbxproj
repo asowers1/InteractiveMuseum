@@ -38,6 +38,7 @@
 		49FED2BC18D79129004BE4E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29B18D79129004BE4E0 /* UIKit.framework */; };
 		49FED2C418D79129004BE4E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49FED2C218D79129004BE4E0 /* InfoPlist.strings */; };
 		49FED2C618D79129004BE4E0 /* InteractiveMuseumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FED2C518D79129004BE4E0 /* InteractiveMuseumTests.m */; };
+		5D252C5218E20BF400195CB4 /* IMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D252C5118E20BF400195CB4 /* IMDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,8 @@
 		49FED2C118D79129004BE4E0 /* InteractiveMuseumTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InteractiveMuseumTests-Info.plist"; sourceTree = "<group>"; };
 		49FED2C318D79129004BE4E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49FED2C518D79129004BE4E0 /* InteractiveMuseumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractiveMuseumTests.m; sourceTree = "<group>"; };
+		5D252C5018E20BF400195CB4 /* IMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMDetailViewController.h; sourceTree = "<group>"; };
+		5D252C5118E20BF400195CB4 /* IMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +223,8 @@
 				492AB6AC18D79FFF001B9559 /* REFrostedViewController */,
 				492AB6BF18D7A0F8001B9559 /* REFrostedViewControllerStoryboards */,
 				49FED29E18D79129004BE4E0 /* Supporting Files */,
+				5D252C5018E20BF400195CB4 /* IMDetailViewController.h */,
+				5D252C5118E20BF400195CB4 /* IMDetailViewController.m */,
 			);
 			path = InteractiveMuseum;
 			sourceTree = "<group>";
@@ -366,6 +371,7 @@
 				49FED2A418D79129004BE4E0 /* main.m in Sources */,
 				492AB72418D7CBD9001B9559 /* CHTCollectionViewWaterfallHeader.m in Sources */,
 				492AB72518D7CBD9001B9559 /* CHTCollectionViewWaterfallFooter.m in Sources */,
+				5D252C5218E20BF400195CB4 /* IMDetailViewController.m in Sources */,
 				492AB72318D7CBD9001B9559 /* CHTCollectionViewWaterfallCell.m in Sources */,
 				492AB6DD18D7A0F8001B9559 /* DEMONavigationController.m in Sources */,
 				492AB6DE18D7A0F8001B9559 /* DEMORootViewController.m in Sources */,

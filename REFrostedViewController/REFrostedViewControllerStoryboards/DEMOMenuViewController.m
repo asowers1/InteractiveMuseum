@@ -11,6 +11,7 @@
 #import "DEMOSecondViewController.h"
 #import "UIViewController+REFrostedViewController.h"
 #import "DEMONavigationController.h"
+#import "IMDetailViewController.h"
 
 
 #import "CHTCollectionViewWaterfallCell.h"
@@ -260,6 +261,18 @@
     return reusableView;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    DEMONavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"contentController"];
+    IMDetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"detailController"];
+    navigationController.viewControllers = @[detailViewController];
+    
+    // TODO: pass the object to the detailViewController
+    
+    self.frostedViewController.contentViewController = navigationController;
+    [self.frostedViewController hideMenuViewController];
+
+}
 
 
 #pragma mark - CHTCollectionViewDelegateWaterfallLayout
