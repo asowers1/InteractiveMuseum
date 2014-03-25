@@ -40,8 +40,11 @@
     infoLabel1.textColor = [UIColor grayColor];
     infoLabel1.textAlignment = NSTextAlignmentCenter;
     infoLabel1.backgroundColor = [UIColor clearColor];
-    infoLabel1.font = [UIFont fontWithName:@"Baskerville-Italic" size:24];
+    infoLabel1.font = [UIFont fontWithName:@"Baskerville-Italic" size:36];
     infoLabel1.adjustsFontSizeToFitWidth=YES;
+    
+    [[UIBarButtonItem appearance] setTintColor:[UIColor redColor]];
+    
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
         UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
