@@ -43,7 +43,7 @@
     infoLabel1.font = [UIFont fontWithName:@"Baskerville-Italic" size:36];
     infoLabel1.adjustsFontSizeToFitWidth=YES;
     
-    [[UIBarButtonItem appearance] setTintColor:[UIColor redColor]];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:116.0/255.0 green:191.0/255.0 blue:185.0/255.0 alpha:1.0];
     
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         

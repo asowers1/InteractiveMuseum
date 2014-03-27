@@ -29,10 +29,10 @@
 
 -(void)viewDidLoad{
     UILabel* tlabel=[[UILabel alloc] initWithFrame:CGRectMake(0,0, 300, 40)];
-    tlabel.text=@"Interactive Museum";
-    tlabel.textColor=[UIColor grayColor];
+    tlabel.text=@"VisitTheMuseum";
+    tlabel.textColor=[UIColor colorWithRed:116.0/255.0 green:191.0/255.0 blue:185.0/255.0 alpha:1.0];
     tlabel.textAlignment=NSTextAlignmentCenter;
-    tlabel.backgroundColor =[UIColor clearColor];
+    //tlabel.backgroundColor =[UIColor clearColor];
     tlabel.font = [UIFont fontWithName:@"Baskerville-Italic" size:24];
     tlabel.adjustsFontSizeToFitWidth=YES;
     self.navigationItem.titleView=tlabel;
