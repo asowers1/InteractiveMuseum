@@ -10,7 +10,7 @@
 #import "REFrostedViewController.h"
 #import "TFHpple.h"
 #import "IMArtPiece.h"
-
+#import "IMAudioPlayerView.h"
 
 @interface IMDetailViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
@@ -70,8 +70,9 @@
     NSString *picInfoQueryString = @"//p[@class='picinfo']";
     NSString *picDescriptionQueryString = @"//div[@class='picdesc']/p";
     NSString *picWikipediaDescriptionQueryString = @"//div[@class='wikipedia']/p";
+    NSString *audioFileNameQueryString = @"//div[@class='clearfix audio-ctrl']";
     
-    // get the image name from the HTML file
+    // get the image file name from the HTML file
     NSArray *imageName = [parser searchWithXPathQuery:picImageQueryString];
     for (TFHppleElement *element in imageName) {
         NSString *imageFileName = [element objectForKey:@"src"];
@@ -96,6 +97,7 @@
         }
     }
     
+    // get the descriptions, separated by paragraph tag
     NSArray *picDescription = [parser searchWithXPathQuery:picDescriptionQueryString];
     NSMutableArray *pieceDescriptions = [[NSMutableArray alloc] init];
     for (TFHppleElement *element in picDescription) {
@@ -104,6 +106,7 @@
     }
     self.artPiece.descriptions = [[NSMutableArray alloc] initWithArray:pieceDescriptions];
     
+    // get the Wikipedia descriptions, separated by paragraph tag
     NSArray *picWikipediaDescription = [parser searchWithXPathQuery:picWikipediaDescriptionQueryString];
     NSMutableArray *wikipediaDescriptions = [[NSMutableArray alloc] init];
     for (TFHppleElement *element in picWikipediaDescription) {
@@ -111,6 +114,16 @@
         [wikipediaDescriptions addObject:description];
     }
     self.artPiece.wikipediaDescriptions = [[NSMutableArray alloc] initWithArray:wikipediaDescriptions];
+    
+    // get the audio file name from the HTML file
+    NSArray *audioFileName = [parser searchWithXPathQuery:audioFileNameQueryString];
+    for (TFHppleElement *element in audioFileName) {
+        NSString *fileName = [element objectForKey:@"data-audiosrc"];
+        self.artPiece.audioFileName = fileName;
+    }
+    
+    
+    
 }
 
 - (void)setUpView
@@ -121,6 +134,9 @@
     self.collectionLabel.text = self.artPiece.collection;
     self.descriptionTextView.text = [self.artPiece.descriptions objectAtIndex:0];
     self.wikipediaDescriptionTextView.text = [self.artPiece.wikipediaDescriptions objectAtIndex:0];
+    
+    IMAudioPlayerView *audioPlayerView = [[IMAudioPlayerView alloc] initWithFrame:CGRectMake(225, 139, 75, 55) audioFile:self.artPiece.audioFileName andImageFile:self.artPiece.imageName];
+    [self.view addSubview:audioPlayerView];
 }
 
 

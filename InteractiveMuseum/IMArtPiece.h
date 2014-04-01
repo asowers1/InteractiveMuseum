@@ -15,4 +15,5 @@
 @property (strong, nonatomic) NSString *imageName;
 @property (strong, nonatomic) NSMutableArray *descriptions;
 @property (strong, nonatomic) NSMutableArray *wikipediaDescriptions;
+@property (strong, nonatomic) NSString *audioFileName;
 @end
