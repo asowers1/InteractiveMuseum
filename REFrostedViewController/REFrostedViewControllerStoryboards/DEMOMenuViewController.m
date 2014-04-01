@@ -41,7 +41,9 @@
     self.tableView.opaque = NO;
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.tableHeaderView = ({
-        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 184.0f)];
+        //UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 184.0f)];
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 64.0f)];
+        /*
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 40, 100, 100)];
         imageView.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         imageView.image = [UIImage imageNamed:@"Object1.png"];
@@ -52,8 +54,8 @@
         imageView.layer.rasterizationScale = [UIScreen mainScreen].scale;
         imageView.layer.shouldRasterize = YES;
         imageView.clipsToBounds = YES;
-        
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 0, 24)];
+        */
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 32, 0, 24)];
         label.text = @"Memoir";
         label.font = [UIFont fontWithName:@"Baskerville-Italic" size:28];
         label.backgroundColor = [UIColor clearColor];
@@ -61,7 +63,7 @@
         [label sizeToFit];
         label.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
         
-        [view addSubview:imageView];
+        //[view addSubview:imageView];
         [view addSubview:label];
         view;
     });
@@ -131,7 +133,7 @@
     if (indexPath.section==0) {
         return 0;
     }else if(indexPath.section==1){
-        return self.view.bounds.size.height-100;
+        return self.view.bounds.size.height-64;
     }
     else return 0;
 }
@@ -145,7 +147,7 @@
 {
     
     if (sectionIndex==0) {
-        return 2;
+        return 0;
     }else if(sectionIndex==1){
         return 1;
     }
