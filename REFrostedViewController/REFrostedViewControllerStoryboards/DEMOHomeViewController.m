@@ -33,7 +33,7 @@
     tlabel.textColor=[UIColor colorWithRed:116.0/255.0 green:191.0/255.0 blue:185.0/255.0 alpha:1.0];
     tlabel.textAlignment=NSTextAlignmentCenter;
     //tlabel.backgroundColor =[UIColor clearColor];
-    tlabel.font = [UIFont fontWithName:@"Baskerville-Italic" size:24];
+    tlabel.font = [UIFont fontWithName:@"Baskerville-Italic" size:28];
     tlabel.adjustsFontSizeToFitWidth=YES;
     self.navigationItem.titleView=tlabel;
     //self.title = @"Interactive Museum";

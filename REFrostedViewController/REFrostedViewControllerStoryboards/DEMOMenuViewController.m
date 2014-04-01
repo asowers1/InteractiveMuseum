@@ -54,8 +54,8 @@
         imageView.clipsToBounds = YES;
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 150, 0, 24)];
-        label.text = @"My Memoir";
-        label.font = [UIFont fontWithName:@"HelveticaNeue" size:21];
+        label.text = @"Memoir";
+        label.font = [UIFont fontWithName:@"Baskerville-Italic" size:28];
         label.backgroundColor = [UIColor clearColor];
         label.textColor = [UIColor colorWithRed:62/255.0f green:68/255.0f blue:75/255.0f alpha:1.0f];
         [label sizeToFit];
@@ -129,9 +129,9 @@
 {
 
     if (indexPath.section==0) {
-        return 54;
+        return 0;
     }else if(indexPath.section==1){
-        return self.view.bounds.size.height-288;
+        return self.view.bounds.size.height-100;
     }
     else return 0;
 }
