@@ -15,12 +15,6 @@
                     <view key="view" contentMode="scaleToFill" id="Aw5-No-rzx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="JohnsonFrontPage" translatesAutoresizingMaskIntoConstraints="NO" id="hN5-cl-sjc">
-                                <rect key="frame" x="43" y="113" width="234" height="341"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -343,7 +337,6 @@
         <!--View Controller-->
         <scene sceneID="eMw-oW-KIv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G5H-ey-j2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="Dbc-Qf-KN4" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JtB-1u-gZr"/>
@@ -356,13 +349,13 @@
                     </view>
                     <toolbarItems/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G5H-ey-j2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-104" y="292"/>
         </scene>
     </scenes>
     <resources>
         <image name="CameraRet" width="32" height="32"/>
-        <image name="JohnsonFrontPage" width="627" height="839"/>
         <image name="retinaTraySmaller-1" width="16" height="16"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
