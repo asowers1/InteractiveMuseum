@@ -37,6 +37,10 @@
     tlabel.adjustsFontSizeToFitWidth=YES;
     self.navigationItem.titleView=tlabel;
     //self.title = @"Interactive Museum";
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(43, 113, 234, 341)];
+    imageView.image = [UIImage imageNamed:@"JohnsonFrontPage"];
+    [self.view addSubview:imageView];
 }
 
 

@@ -48,6 +48,12 @@
 		49FED2C418D79129004BE4E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49FED2C218D79129004BE4E0 /* InfoPlist.strings */; };
 		49FED2C618D79129004BE4E0 /* InteractiveMuseumTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49FED2C518D79129004BE4E0 /* InteractiveMuseumTests.m */; };
 		5D252C5218E20BF400195CB4 /* IMDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D252C5118E20BF400195CB4 /* IMDetailViewController.m */; };
+		5D480C4418EB1B0300D5A7D8 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D480C3F18EB1B0300D5A7D8 /* TFHpple.m */; };
+		5D480C4518EB1B0300D5A7D8 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D480C4118EB1B0300D5A7D8 /* TFHppleElement.m */; };
+		5D480C4618EB1B0300D5A7D8 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D480C4318EB1B0300D5A7D8 /* XPathQuery.m */; };
+		5D480C4818EB1B8D00D5A7D8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D480C4718EB1B8D00D5A7D8 /* libxml2.dylib */; };
+		5D480C4D18EB2AF200D5A7D8 /* IMArtPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D480C4C18EB2AF200D5A7D8 /* IMArtPiece.m */; };
+		5D480C5018EB32D600D5A7D8 /* Object1.html in Resources */ = {isa = PBXBuildFile; fileRef = 5D480C4F18EB32D600D5A7D8 /* Object1.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +130,16 @@
 		49FED2C518D79129004BE4E0 /* InteractiveMuseumTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InteractiveMuseumTests.m; sourceTree = "<group>"; };
 		5D252C5018E20BF400195CB4 /* IMDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMDetailViewController.h; sourceTree = "<group>"; };
 		5D252C5118E20BF400195CB4 /* IMDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMDetailViewController.m; sourceTree = "<group>"; };
+		5D480C3E18EB1B0300D5A7D8 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		5D480C3F18EB1B0300D5A7D8 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		5D480C4018EB1B0300D5A7D8 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		5D480C4118EB1B0300D5A7D8 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		5D480C4218EB1B0300D5A7D8 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		5D480C4318EB1B0300D5A7D8 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		5D480C4718EB1B8D00D5A7D8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		5D480C4B18EB2AF200D5A7D8 /* IMArtPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMArtPiece.h; sourceTree = "<group>"; };
+		5D480C4C18EB2AF200D5A7D8 /* IMArtPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMArtPiece.m; sourceTree = "<group>"; };
+		5D480C4F18EB32D600D5A7D8 /* Object1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Object1.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D480C4818EB1B8D00D5A7D8 /* libxml2.dylib in Frameworks */,
 				49FED29A18D79129004BE4E0 /* CoreGraphics.framework in Frameworks */,
 				49FED29C18D79129004BE4E0 /* UIKit.framework in Frameworks */,
 				49FED29818D79129004BE4E0 /* Foundation.framework in Frameworks */,
@@ -224,6 +241,7 @@
 		49FED29618D79129004BE4E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D480C4718EB1B8D00D5A7D8 /* libxml2.dylib */,
 				49FED29718D79129004BE4E0 /* Foundation.framework */,
 				49FED29918D79129004BE4E0 /* CoreGraphics.framework */,
 				49FED29B18D79129004BE4E0 /* UIKit.framework */,
@@ -235,6 +253,7 @@
 		49FED29D18D79129004BE4E0 /* InteractiveMuseum */ = {
 			isa = PBXGroup;
 			children = (
+				5D480C3D18EB1ACE00D5A7D8 /* hpple */,
 				49FED2A618D79129004BE4E0 /* IMAppDelegate.h */,
 				49FED2A718D79129004BE4E0 /* IMAppDelegate.m */,
 				49360B6518DFA82A00F506B1 /* MUCameraViewViewController.h */,
@@ -260,6 +279,7 @@
 				49FED29E18D79129004BE4E0 /* Supporting Files */,
 				5D252C5018E20BF400195CB4 /* IMDetailViewController.h */,
 				5D252C5118E20BF400195CB4 /* IMDetailViewController.m */,
+				5D480C4E18EB2AF600D5A7D8 /* Model */,
 			);
 			path = InteractiveMuseum;
 			sourceTree = "<group>";
@@ -267,6 +287,7 @@
 		49FED29E18D79129004BE4E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5D480C4F18EB32D600D5A7D8 /* Object1.html */,
 				49FED29F18D79129004BE4E0 /* InteractiveMuseum-Info.plist */,
 				49FED2A018D79129004BE4E0 /* InfoPlist.strings */,
 				49FED2A318D79129004BE4E0 /* main.m */,
@@ -291,6 +312,28 @@
 				49FED2C218D79129004BE4E0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5D480C3D18EB1ACE00D5A7D8 /* hpple */ = {
+			isa = PBXGroup;
+			children = (
+				5D480C3E18EB1B0300D5A7D8 /* TFHpple.h */,
+				5D480C3F18EB1B0300D5A7D8 /* TFHpple.m */,
+				5D480C4018EB1B0300D5A7D8 /* TFHppleElement.h */,
+				5D480C4118EB1B0300D5A7D8 /* TFHppleElement.m */,
+				5D480C4218EB1B0300D5A7D8 /* XPathQuery.h */,
+				5D480C4318EB1B0300D5A7D8 /* XPathQuery.m */,
+			);
+			name = hpple;
+			sourceTree = "<group>";
+		};
+		5D480C4E18EB2AF600D5A7D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D480C4B18EB2AF200D5A7D8 /* IMArtPiece.h */,
+				5D480C4C18EB2AF200D5A7D8 /* IMArtPiece.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -375,11 +418,7 @@
 			files = (
 				4934141F18EA7656005CB997 /* 6.jpg in Resources */,
 				492AB6E518D7B8ED001B9559 /* Images.xcassets in Resources */,
-				4934141E18EA7656005CB997 /* 5.jpg in Resources */,
-				4934142018EA7656005CB997 /* 7.jpg in Resources */,
-				4934141918EA7656005CB997 /* 0.jpg in Resources */,
-				4934142218EA7925005CB997 /* 8.jpg in Resources */,
-				4934141B18EA7656005CB997 /* 2.jpg in Resources */,
+				5D480C5018EB32D600D5A7D8 /* Object1.html in Resources */,
 				49FED2AE18D79129004BE4E0 /* Main_iPad.storyboard in Resources */,
 				4934141A18EA7656005CB997 /* 1.jpg in Resources */,
 				49FED2AB18D79129004BE4E0 /* Main_iPhone.storyboard in Resources */,
@@ -406,6 +445,8 @@
 			files = (
 				492AB6BE18D79FFF001B9559 /* UIViewController+REFrostedViewController.m in Sources */,
 				492AB72818D7CC8B001B9559 /* CHTCollectionViewWaterfallLayout.m in Sources */,
+				5D480C4D18EB2AF200D5A7D8 /* IMArtPiece.m in Sources */,
+				5D480C4618EB1B0300D5A7D8 /* XPathQuery.m in Sources */,
 				492AB6BD18D79FFF001B9559 /* UIView+REFrostedViewController.m in Sources */,
 				49360B6418DFA67A00F506B1 /* AVCamPreviewView.m in Sources */,
 				49360B6718DFA82A00F506B1 /* MUCameraViewViewController.m in Sources */,
@@ -414,6 +455,8 @@
 				492AB6BC18D79FFF001B9559 /* UIImage+REFrostedViewController.m in Sources */,
 				49FED2A418D79129004BE4E0 /* main.m in Sources */,
 				492AB72418D7CBD9001B9559 /* CHTCollectionViewWaterfallHeader.m in Sources */,
+				5D480C4518EB1B0300D5A7D8 /* TFHppleElement.m in Sources */,
+				5D480C4418EB1B0300D5A7D8 /* TFHpple.m in Sources */,
 				492AB72518D7CBD9001B9559 /* CHTCollectionViewWaterfallFooter.m in Sources */,
 				5D252C5218E20BF400195CB4 /* IMDetailViewController.m in Sources */,
 				492AB72318D7CBD9001B9559 /* CHTCollectionViewWaterfallCell.m in Sources */,
@@ -513,6 +556,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -546,6 +594,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SDKROOT)/usr/include/libxml2",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
