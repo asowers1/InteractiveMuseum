@@ -14,4 +14,5 @@
 @property (strong, nonatomic) NSString *collection;
 @property (strong, nonatomic) NSString *imageName;
 @property (strong, nonatomic) NSMutableArray *descriptions;
+@property (strong, nonatomic) NSMutableArray *wikipediaDescriptions;
 @end

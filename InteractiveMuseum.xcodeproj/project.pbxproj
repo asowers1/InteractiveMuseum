@@ -43,8 +43,8 @@
 		5D480C4518EB1B0300D5A7D8 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D480C4118EB1B0300D5A7D8 /* TFHppleElement.m */; };
 		5D480C4618EB1B0300D5A7D8 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D480C4318EB1B0300D5A7D8 /* XPathQuery.m */; };
 		5D480C4818EB1B8D00D5A7D8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D480C4718EB1B8D00D5A7D8 /* libxml2.dylib */; };
-		5D480C4A18EB1CE700D5A7D8 /* Object1.html in Resources */ = {isa = PBXBuildFile; fileRef = 5D480C4918EB1CE700D5A7D8 /* Object1.html */; };
 		5D480C4D18EB2AF200D5A7D8 /* IMArtPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D480C4C18EB2AF200D5A7D8 /* IMArtPiece.m */; };
+		5D480C5018EB32D600D5A7D8 /* Object1.html in Resources */ = {isa = PBXBuildFile; fileRef = 5D480C4F18EB32D600D5A7D8 /* Object1.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -119,9 +119,9 @@
 		5D480C4218EB1B0300D5A7D8 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
 		5D480C4318EB1B0300D5A7D8 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
 		5D480C4718EB1B8D00D5A7D8 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		5D480C4918EB1CE700D5A7D8 /* Object1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Object1.html; sourceTree = "<group>"; };
 		5D480C4B18EB2AF200D5A7D8 /* IMArtPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMArtPiece.h; sourceTree = "<group>"; };
 		5D480C4C18EB2AF200D5A7D8 /* IMArtPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMArtPiece.m; sourceTree = "<group>"; };
+		5D480C4F18EB32D600D5A7D8 /* Object1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Object1.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,7 +252,7 @@
 		49FED29E18D79129004BE4E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5D480C4918EB1CE700D5A7D8 /* Object1.html */,
+				5D480C4F18EB32D600D5A7D8 /* Object1.html */,
 				49FED29F18D79129004BE4E0 /* InteractiveMuseum-Info.plist */,
 				49FED2A018D79129004BE4E0 /* InfoPlist.strings */,
 				49FED2A318D79129004BE4E0 /* main.m */,
@@ -381,8 +381,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D480C4A18EB1CE700D5A7D8 /* Object1.html in Resources */,
 				492AB6E518D7B8ED001B9559 /* Images.xcassets in Resources */,
+				5D480C5018EB32D600D5A7D8 /* Object1.html in Resources */,
 				49FED2AE18D79129004BE4E0 /* Main_iPad.storyboard in Resources */,
 				49FED2AB18D79129004BE4E0 /* Main_iPhone.storyboard in Resources */,
 				49FED2A218D79129004BE4E0 /* InfoPlist.strings in Resources */,
