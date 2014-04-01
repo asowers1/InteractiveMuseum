@@ -54,13 +54,13 @@
                 <viewController storyboardIdentifier="homeController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="VcY-P9-Qty" customClass="DEMOHomeViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="wrH-lD-XDg">
-                        <barButtonItem key="leftBarButtonItem" image="retinaTraySmaller-1" id="bIK-yz-PnD">
+                        <barButtonItem key="leftBarButtonItem" image="memiorGrid" id="bIK-yz-PnD">
                             <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="showMenu" destination="VcY-P9-Qty" id="Idu-8D-Wwi"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" tag="1" image="CameraRet" id="FTU-2j-tXw">
+                        <barButtonItem key="rightBarButtonItem" tag="1" image="currentCam" id="FTU-2j-tXw">
                             <color key="tintColor" red="0.46274513006210327" green="0.7568628191947937" blue="0.72156864404678345" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
                                 <segue destination="fOn-L2-JSf" kind="push" id="ATf-EY-zpU"/>
@@ -343,7 +343,6 @@
         <!--View Controller-->
         <scene sceneID="eMw-oW-KIv">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="G5H-ey-j2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="Dbc-Qf-KN4" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JtB-1u-gZr"/>
@@ -356,6 +355,7 @@
                     </view>
                     <toolbarItems/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G5H-ey-j2b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-104" y="292"/>
         </scene>
@@ -363,6 +363,8 @@
     <resources>
         <image name="CameraRet" width="32" height="32"/>
         <image name="JohnsonFrontPage" width="627" height="839"/>
+        <image name="currentCam" width="32" height="32"/>
+        <image name="memiorGrid" width="26" height="26"/>
         <image name="retinaTraySmaller-1" width="16" height="16"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
