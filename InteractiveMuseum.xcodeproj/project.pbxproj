@@ -23,15 +23,10 @@
 		492AB72418D7CBD9001B9559 /* CHTCollectionViewWaterfallHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB72018D7CBD9001B9559 /* CHTCollectionViewWaterfallHeader.m */; };
 		492AB72518D7CBD9001B9559 /* CHTCollectionViewWaterfallFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB72218D7CBD9001B9559 /* CHTCollectionViewWaterfallFooter.m */; };
 		492AB72818D7CC8B001B9559 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 492AB72718D7CC8B001B9559 /* CHTCollectionViewWaterfallLayout.m */; };
-		4934141918EA7656005CB997 /* 0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4934141118EA7656005CB997 /* 0.jpg */; };
 		4934141A18EA7656005CB997 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4934141218EA7656005CB997 /* 1.jpg */; };
-		4934141B18EA7656005CB997 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4934141318EA7656005CB997 /* 2.jpg */; };
 		4934141C18EA7656005CB997 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4934141418EA7656005CB997 /* 3.jpg */; };
 		4934141D18EA7656005CB997 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4934141518EA7656005CB997 /* 4.jpg */; };
-		4934141E18EA7656005CB997 /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4934141618EA7656005CB997 /* 5.jpg */; };
 		4934141F18EA7656005CB997 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4934141718EA7656005CB997 /* 6.jpg */; };
-		4934142018EA7656005CB997 /* 7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4934141818EA7656005CB997 /* 7.jpg */; };
-		4934142218EA7925005CB997 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4934142118EA7925005CB997 /* 8.jpg */; };
 		49360B6418DFA67A00F506B1 /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49360B6318DFA67A00F506B1 /* AVCamPreviewView.m */; };
 		49360B6718DFA82A00F506B1 /* MUCameraViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49360B6618DFA82A00F506B1 /* MUCameraViewViewController.m */; };
 		49FED29818D79129004BE4E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29718D79129004BE4E0 /* Foundation.framework */; };
@@ -54,6 +49,9 @@
 		5D480C4818EB1B8D00D5A7D8 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D480C4718EB1B8D00D5A7D8 /* libxml2.dylib */; };
 		5D480C4D18EB2AF200D5A7D8 /* IMArtPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D480C4C18EB2AF200D5A7D8 /* IMArtPiece.m */; };
 		5D480C5018EB32D600D5A7D8 /* Object1.html in Resources */ = {isa = PBXBuildFile; fileRef = 5D480C4F18EB32D600D5A7D8 /* Object1.html */; };
+		5D480C5218EB625A00D5A7D8 /* Object1.Symbolism_of_life.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D480C5118EB625A00D5A7D8 /* Object1.Symbolism_of_life.mp3 */; };
+		5D480C5418EB671700D5A7D8 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D480C5318EB671700D5A7D8 /* AVFoundation.framework */; };
+		5D480C5A18EB6BA000D5A7D8 /* IMAudioPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D480C5918EB6BA000D5A7D8 /* IMAudioPlayerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +138,10 @@
 		5D480C4B18EB2AF200D5A7D8 /* IMArtPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMArtPiece.h; sourceTree = "<group>"; };
 		5D480C4C18EB2AF200D5A7D8 /* IMArtPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMArtPiece.m; sourceTree = "<group>"; };
 		5D480C4F18EB32D600D5A7D8 /* Object1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Object1.html; sourceTree = "<group>"; };
+		5D480C5118EB625A00D5A7D8 /* Object1.Symbolism_of_life.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Object1.Symbolism_of_life.mp3; sourceTree = "<group>"; };
+		5D480C5318EB671700D5A7D8 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		5D480C5818EB6BA000D5A7D8 /* IMAudioPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAudioPlayerView.h; sourceTree = "<group>"; };
+		5D480C5918EB6BA000D5A7D8 /* IMAudioPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAudioPlayerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D480C5418EB671700D5A7D8 /* AVFoundation.framework in Frameworks */,
 				5D480C4818EB1B8D00D5A7D8 /* libxml2.dylib in Frameworks */,
 				49FED29A18D79129004BE4E0 /* CoreGraphics.framework in Frameworks */,
 				49FED29C18D79129004BE4E0 /* UIKit.framework in Frameworks */,
@@ -241,6 +244,7 @@
 		49FED29618D79129004BE4E0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5D480C5318EB671700D5A7D8 /* AVFoundation.framework */,
 				5D480C4718EB1B8D00D5A7D8 /* libxml2.dylib */,
 				49FED29718D79129004BE4E0 /* Foundation.framework */,
 				49FED29918D79129004BE4E0 /* CoreGraphics.framework */,
@@ -280,6 +284,8 @@
 				5D252C5018E20BF400195CB4 /* IMDetailViewController.h */,
 				5D252C5118E20BF400195CB4 /* IMDetailViewController.m */,
 				5D480C4E18EB2AF600D5A7D8 /* Model */,
+				5D480C5818EB6BA000D5A7D8 /* IMAudioPlayerView.h */,
+				5D480C5918EB6BA000D5A7D8 /* IMAudioPlayerView.m */,
 			);
 			path = InteractiveMuseum;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 		49FED29E18D79129004BE4E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5D480C5118EB625A00D5A7D8 /* Object1.Symbolism_of_life.mp3 */,
 				5D480C4F18EB32D600D5A7D8 /* Object1.html */,
 				49FED29F18D79129004BE4E0 /* InteractiveMuseum-Info.plist */,
 				49FED2A018D79129004BE4E0 /* InfoPlist.strings */,
@@ -419,6 +426,7 @@
 				4934141F18EA7656005CB997 /* 6.jpg in Resources */,
 				492AB6E518D7B8ED001B9559 /* Images.xcassets in Resources */,
 				5D480C5018EB32D600D5A7D8 /* Object1.html in Resources */,
+				5D480C5218EB625A00D5A7D8 /* Object1.Symbolism_of_life.mp3 in Resources */,
 				49FED2AE18D79129004BE4E0 /* Main_iPad.storyboard in Resources */,
 				4934141A18EA7656005CB997 /* 1.jpg in Resources */,
 				49FED2AB18D79129004BE4E0 /* Main_iPhone.storyboard in Resources */,
@@ -459,6 +467,7 @@
 				5D480C4418EB1B0300D5A7D8 /* TFHpple.m in Sources */,
 				492AB72518D7CBD9001B9559 /* CHTCollectionViewWaterfallFooter.m in Sources */,
 				5D252C5218E20BF400195CB4 /* IMDetailViewController.m in Sources */,
+				5D480C5A18EB6BA000D5A7D8 /* IMAudioPlayerView.m in Sources */,
 				492AB72318D7CBD9001B9559 /* CHTCollectionViewWaterfallCell.m in Sources */,
 				492AB6DD18D7A0F8001B9559 /* DEMONavigationController.m in Sources */,
 				492AB6DE18D7A0F8001B9559 /* DEMORootViewController.m in Sources */,
