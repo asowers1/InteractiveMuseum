@@ -295,14 +295,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="E3q-Ss-uw3">
-                        <barButtonItem key="leftBarButtonItem" image="retinaTraySmaller-1" id="eOh-Hr-0Fh">
-                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="leftBarButtonItem" image="memiorGrid" id="eOh-Hr-0Fh">
+                            <color key="tintColor" red="0.53333336109999996" green="0.79215693470000004" blue="0.75294125079999996" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
                                 <action selector="showMenu:" destination="F3v-kU-MJz" id="Pkg-lD-rPE"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="CameraRet" id="d9a-jW-FLP">
-                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="rightBarButtonItem" image="currentCam" id="d9a-jW-FLP">
+                            <color key="tintColor" red="0.53333336109999996" green="0.79215693470000004" blue="0.75294125079999996" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
                                 <segue destination="fOn-L2-JSf" kind="push" id="v24-bP-xeo"/>
                             </connections>
@@ -344,11 +344,9 @@
     </scenes>
     <resources>
         <image name="AddToMemoir" width="30" height="30"/>
-        <image name="CameraRet" width="32" height="32"/>
         <image name="FacebookImage" width="30" height="30"/>
         <image name="currentCam" width="32" height="32"/>
         <image name="memiorGrid" width="26" height="26"/>
-        <image name="retinaTraySmaller-1" width="16" height="16"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
