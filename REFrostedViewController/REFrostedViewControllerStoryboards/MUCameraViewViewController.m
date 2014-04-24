@@ -104,11 +104,14 @@
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
+- (IBAction)sendButton:(id)sender {
+    [self sendPhotoToServer];
+}
 
 - (void)sendPhotoToServer {
-    NSData* fileData = [[NSData alloc] initWithContentsOfFile:@"currentPhoto.png"];
+    NSData* fileData = [[NSData alloc] initWithContentsOfFile:@"photo.jpg"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:@"your_url"]];
+    [request setURL:[NSURL URLWithString:@"http://54.84.76.140:8000"]];
     [request setHTTPMethod:@"POST"];
     
     NSString *boundary = @"0xKhTmLbOuNdArY"; // This is important! //NSURLConnection is very sensitive to format.
@@ -131,7 +134,9 @@
     [request setHTTPBody:body];
     
     // now lets make the connection to the web
-    //NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSString* newStr = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
+    NSLog(@"DATA: %@",newStr);
 }
 
 
