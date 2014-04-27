@@ -300,6 +300,9 @@
                                 <state key="normal" image="FacebookImage">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="share:" destination="F3v-kU-MJz" eventType="touchUpInside" id="7Sd-jA-Wub"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -324,6 +327,8 @@
                         <outlet property="collectionLabel" destination="m9Y-e5-cLc" id="X45-xa-AeO"/>
                         <outlet property="descriptionTextView" destination="jxY-yn-55T" id="bbG-R4-tJS"/>
                         <outlet property="imageView" destination="ie8-Zg-w96" id="faY-7b-u3q"/>
+                        <outlet property="memiorButton" destination="5Gg-wN-ZXS" id="UPy-yZ-Fi3"/>
+                        <outlet property="shareButton" destination="VvT-tY-CBs" id="og5-OU-0rW"/>
                         <outlet property="titleLabel" destination="IlU-Ox-gsc" id="EGZ-Cf-Fsi"/>
                         <outlet property="wikipediaDescriptionTextView" destination="srb-XI-dIs" id="UwZ-fq-9yE"/>
                     </connections>

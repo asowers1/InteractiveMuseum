@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IMDetailViewController : UIViewController
+@interface IMDetailViewController : UIViewController <UIAlertViewDelegate, UIActionSheetDelegate>
 
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+@property (weak, nonatomic) IBOutlet UIButton *memiorButton;
 @end

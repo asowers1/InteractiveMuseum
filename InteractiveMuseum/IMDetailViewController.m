@@ -139,5 +139,14 @@
     [self.view addSubview:audioPlayerView];
 }
 
+- (IBAction)share:(id)sender {
+    NSString *shareString = @"test";
+
+    NSArray *activityItems = [NSArray arrayWithObjects:shareString, nil];
+    
+    UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
+    
+    [self presentViewController:activityView animated:YES completion:nil];
+}
 
 @end

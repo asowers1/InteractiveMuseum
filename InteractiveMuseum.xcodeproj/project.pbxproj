@@ -29,7 +29,6 @@
 		4934141F18EA7656005CB997 /* 6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4934141718EA7656005CB997 /* 6.jpg */; };
 		49360B6418DFA67A00F506B1 /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49360B6318DFA67A00F506B1 /* AVCamPreviewView.m */; };
 		49360B6718DFA82A00F506B1 /* MUCameraViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49360B6618DFA82A00F506B1 /* MUCameraViewViewController.m */; };
-		49E6D5341908A464003DC39C /* photo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49E6D5331908A464003DC39C /* photo.jpg */; };
 		49FED29818D79129004BE4E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29718D79129004BE4E0 /* Foundation.framework */; };
 		49FED29A18D79129004BE4E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29918D79129004BE4E0 /* CoreGraphics.framework */; };
 		49FED29C18D79129004BE4E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29B18D79129004BE4E0 /* UIKit.framework */; };
@@ -110,7 +109,6 @@
 		49360B6318DFA67A00F506B1 /* AVCamPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AVCamPreviewView.m; path = ../REFrostedViewController/REFrostedViewControllerStoryboards/AVCamPreviewView.m; sourceTree = "<group>"; };
 		49360B6518DFA82A00F506B1 /* MUCameraViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MUCameraViewViewController.h; path = ../REFrostedViewController/REFrostedViewControllerStoryboards/MUCameraViewViewController.h; sourceTree = "<group>"; };
 		49360B6618DFA82A00F506B1 /* MUCameraViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MUCameraViewViewController.m; path = ../REFrostedViewController/REFrostedViewControllerStoryboards/MUCameraViewViewController.m; sourceTree = "<group>"; };
-		49E6D5331908A464003DC39C /* photo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = photo.jpg; sourceTree = "<group>"; };
 		49FED29418D79129004BE4E0 /* InteractiveMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49FED29718D79129004BE4E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49FED29918D79129004BE4E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -211,7 +209,6 @@
 		4934141018EA7656005CB997 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				49E6D5331908A464003DC39C /* photo.jpg */,
 				4934141118EA7656005CB997 /* 0.jpg */,
 				4934141218EA7656005CB997 /* 1.jpg */,
 				4934141318EA7656005CB997 /* 2.jpg */,
@@ -431,7 +428,6 @@
 				5D480C5018EB32D600D5A7D8 /* Object1.html in Resources */,
 				5D480C5218EB625A00D5A7D8 /* Object1.Symbolism_of_life.mp3 in Resources */,
 				49FED2AE18D79129004BE4E0 /* Main_iPad.storyboard in Resources */,
-				49E6D5341908A464003DC39C /* photo.jpg in Resources */,
 				4934141A18EA7656005CB997 /* 1.jpg in Resources */,
 				49FED2AB18D79129004BE4E0 /* Main_iPhone.storyboard in Resources */,
 				4934141D18EA7656005CB997 /* 4.jpg in Resources */,
