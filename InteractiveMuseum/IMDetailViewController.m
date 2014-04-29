@@ -121,9 +121,6 @@
         NSString *fileName = [element objectForKey:@"data-audiosrc"];
         self.artPiece.audioFileName = fileName;
     }
-    
-    
-    
 }
 
 - (void)setUpView
@@ -140,10 +137,10 @@
 }
 
 - (IBAction)share:(id)sender {
-    NSString *shareString = @"test";
-
-    NSArray *activityItems = [NSArray arrayWithObjects:shareString, nil];
     
+    UIImage *image = [UIImage imageNamed:self.artPiece.imageName];
+    NSString *shareString = [self.artPiece.descriptions objectAtIndex:0];
+    NSArray *activityItems = [NSArray arrayWithObjects:shareString,image, nil];
     UIActivityViewController *activityView = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:nil];
     
     [self presentViewController:activityView animated:YES completion:nil];
