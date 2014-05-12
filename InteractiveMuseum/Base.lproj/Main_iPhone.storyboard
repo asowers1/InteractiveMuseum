@@ -70,6 +70,78 @@
             </objects>
             <point key="canvasLocation" x="1447" y="298"/>
         </scene>
+        <!--Audio View Controller-->
+        <scene sceneID="C8O-OP-1Gu">
+            <objects>
+                <viewController id="04u-g0-OyF" customClass="IMAudioViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZtO-RD-cAW"/>
+                        <viewControllerLayoutGuide type="bottom" id="dYL-Ok-baV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aCj-ZN-nvN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zf8-Lp-wxd">
+                                <rect key="frame" x="0.0" y="368" width="320" height="200"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqi-VC-bJ7">
+                                        <rect key="frame" x="20" y="20" width="133" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
+                                        <state key="normal" title="Record">
+                                            <color key="titleColor" red="0.53333336109999996" green="0.79215693470000004" blue="0.75294125079999996" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="recordPauseTapped:" destination="04u-g0-OyF" eventType="touchUpInside" id="HJG-Wh-Zir"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbU-cx-qdA">
+                                        <rect key="frame" x="161" y="20" width="133" height="160"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
+                                        <state key="normal" title="Stop">
+                                            <color key="titleColor" red="0.53333336109999996" green="0.79215693470000004" blue="0.75294125079999996" alpha="1" colorSpace="deviceRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopTapped:" destination="04u-g0-OyF" eventType="touchUpInside" id="hRh-ej-cET"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sl9-eB-zMj">
+                                <rect key="frame" x="62" y="72" width="197" height="184"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="42"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGG-mC-MM3">
+                                <rect key="frame" x="128" y="243" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="04u-g0-OyF" eventType="touchUpInside" id="QE6-ka-0Is"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jAG-yf-bk4"/>
+                    <connections>
+                        <outlet property="playButton" destination="tGG-mC-MM3" id="y6I-zM-usv"/>
+                        <outlet property="recordPauseButton" destination="aqi-VC-bJ7" id="68R-Ub-hAJ"/>
+                        <outlet property="stopButton" destination="AbU-cx-qdA" id="zeR-hV-ejl"/>
+                        <outlet property="timeLabel" destination="sl9-eB-zMj" id="wCz-6z-aN5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96P-qL-YkS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1993" y="-415"/>
+        </scene>
         <!--Camera View View Controller-->
         <scene sceneID="DDz-6v-fVz">
             <objects>
@@ -83,13 +155,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="re9-jR-UZh">
-                                <rect key="frame" x="-8" y="386" width="328" height="182"/>
+                                <rect key="frame" x="-4" y="386" width="328" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6v-Yd-JbM">
-                                        <rect key="frame" x="188" y="101" width="44" height="44"/>
+                                        <rect key="frame" x="188" y="101" width="48" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
                                         <state key="normal" title="Select">
                                             <color key="titleColor" red="0.46274513006210327" green="0.7568628191947937" blue="0.72156864404678345" alpha="1" colorSpace="deviceRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -101,7 +173,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwB-t9-qQf">
                                         <rect key="frame" x="102" y="101" width="44" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
                                         <state key="normal" title="Take">
                                             <color key="titleColor" red="0.53333336114883423" green="0.79215693473815918" blue="0.75294125080108643" alpha="1" colorSpace="deviceRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -119,7 +191,7 @@
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RG5-E1-kbW">
                                         <rect key="frame" x="79" y="131" width="171" height="51"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ4-oG-ViU">
@@ -288,20 +360,30 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gg-wN-ZXS">
-                                <rect key="frame" x="225" y="321" width="30" height="30"/>
+                                <rect key="frame" x="207" y="321" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="AddToMemoir">
+                                <state key="normal" image="picture-25">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvT-tY-CBs">
-                                <rect key="frame" x="270" y="321" width="30" height="30"/>
+                                <rect key="frame" x="279" y="321" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="FacebookImage">
+                                <state key="normal" image="upload_filled-25">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="share:" destination="F3v-kU-MJz" eventType="touchUpInside" id="7Sd-jA-Wub"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJd-D7-4a3">
+                                <rect key="frame" x="245" y="323" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="microphone-26">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="04u-g0-OyF" kind="push" id="3ke-KA-LeJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -358,10 +440,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AddToMemoir" width="30" height="30"/>
-        <image name="FacebookImage" width="30" height="30"/>
         <image name="currentCam" width="32" height="32"/>
         <image name="memiorGrid" width="26" height="26"/>
+        <image name="microphone-26" width="26" height="26"/>
+        <image name="picture-25" width="25" height="25"/>
+        <image name="upload_filled-25" width="25" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
