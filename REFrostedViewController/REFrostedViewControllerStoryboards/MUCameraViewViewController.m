@@ -13,7 +13,7 @@
 @end
 
 @implementation MUCameraViewViewController
-@synthesize infoLabel,infoLabel1;
+@synthesize infoLabel,infoLabel1,compressedImage,uncompressedImage;
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -92,9 +92,8 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    self.imageView.image = chosenImage;
-    
+    uncompressedImage = info[UIImagePickerControllerEditedImage];
+    self.imageView.image = uncompressedImage;
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
@@ -104,6 +103,30 @@
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
+
+-(void)setImageCompression
+{
+    [self shrinkPhotoSize:uncompressedImage :100 :100];
+    NSData *imageData = [[NSData alloc] initWithData:UIImageJPEGRepresentation((compressedImage), 0.5)];
+    NSInteger imageSize = imageData.length;
+    NSLog(@"SIZE OF IMAGE: %li ", (long)imageSize);
+
+}
+
+- (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
+    UIGraphicsBeginImageContext(newSize);
+    [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+
+-(void)shrinkPhotoSize:(UIImage *)image :(int)x :(int)y
+{
+    compressedImage = [self imageWithImage:image scaledToSize:CGSizeMake(x, y)];
+}
+
+
 - (IBAction)sendButton:(id)sender {
     [self sendPhotoToServer];
 }

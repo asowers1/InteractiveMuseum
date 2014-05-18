@@ -16,6 +16,8 @@
 - (IBAction)selectPhoto:(UIButton *)sender;
 @property (strong, nonatomic) IBOutlet UILabel *infoLabel;
 @property (strong, nonatomic) IBOutlet UILabel *infoLabel1;
+@property (weak, nonatomic) UIImage *uncompressedImage;
+@property (weak, nonatomic) UIImage *compressedImage;
 
 
 @end

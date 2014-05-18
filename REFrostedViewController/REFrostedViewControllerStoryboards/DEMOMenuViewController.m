@@ -18,7 +18,7 @@
 #import "CHTCollectionViewWaterfallHeader.h"
 #import "CHTCollectionViewWaterfallFooter.h"
 
-#define CELL_COUNT 20
+#define CELL_COUNT 8
 #define CELL_IDENTIFIER @"WaterfallCell"
 #define HEADER_IDENTIFIER @"WaterfallHeader"
 #define FOOTER_IDENTIFIER @"WaterfallFooter"
@@ -55,9 +55,46 @@
         imageView.layer.shouldRasterize = YES;
         imageView.clipsToBounds = YES;
         */
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 32, 0, 24)];
+        
+        int labelHeight=0;
+        int fontSize=0;
+        
+        if(UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone){
+            if ([[UIScreen mainScreen] respondsToSelector: @selector(scale)]) {
+                CGSize result = [[UIScreen mainScreen] bounds].size;
+                CGFloat scale = [UIScreen mainScreen].scale;
+                result = CGSizeMake(result.width * scale, result.height * scale);
+                
+                if(result.height == 960){
+                    NSLog(@"iphone 4, 4s retina resolution");
+                    
+                    //CODE IF IPHONE 4
+                    
+                    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+                        //Code if iPhone 4 or 4s and iOS 7
+                        NSLog(@"iPhone 4 iOS 7");
+                        labelHeight = 14;
+                        fontSize=18;
+                    }
+                }
+                if(result.height == 1136){
+                    NSLog(@"iphone 5 resolution");
+                    
+                    //CODE IF iPHONE 5
+                    
+                    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
+                        //Code if iPhone 5 or 5s and iOS 7
+                        NSLog(@"iPhone 5 iOS 7");
+                        labelHeight=32;
+                        fontSize=28;
+                    }
+                }
+            }
+        }
+        
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, labelHeight, 0, 24)];
         label.text = @"Memoir";
-        label.font = [UIFont fontWithName:@"Baskerville-BoldItalic" size:28];
+        label.font = [UIFont fontWithName:@"Baskerville-BoldItalic" size:fontSize];
         label.backgroundColor = [UIColor clearColor];
         label.textColor = [UIColor colorWithRed:62/255.0f green:68/255.0f blue:75/255.0f alpha:1.0f];
         [label sizeToFit];
@@ -67,7 +104,12 @@
         [view addSubview:label];
         view;
     });
+}
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    //find number of items from memoir entries
+    // set number of columns from number of items
 }
 
 #pragma mark -

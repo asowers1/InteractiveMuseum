@@ -30,6 +30,9 @@
 		49360B6418DFA67A00F506B1 /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49360B6318DFA67A00F506B1 /* AVCamPreviewView.m */; };
 		49360B6718DFA82A00F506B1 /* MUCameraViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49360B6618DFA82A00F506B1 /* MUCameraViewViewController.m */; };
 		495A64D1191E8B50001E8EBA /* IMAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495A64D0191E8B50001E8EBA /* IMAudioViewController.m */; };
+		49DCB5CA19245AD200822160 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DCB5C919245AD200822160 /* SenTestingKit.framework */; };
+		49DCB5D019245B5800822160 /* FFCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DCB5CD19245B5800822160 /* FFCircularProgressView.m */; };
+		49DCB5D119245B5800822160 /* UIColor+iOS7.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DCB5CF19245B5800822160 /* UIColor+iOS7.m */; };
 		49FED29818D79129004BE4E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29718D79129004BE4E0 /* Foundation.framework */; };
 		49FED29A18D79129004BE4E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29918D79129004BE4E0 /* CoreGraphics.framework */; };
 		49FED29C18D79129004BE4E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29B18D79129004BE4E0 /* UIKit.framework */; };
@@ -112,6 +115,11 @@
 		49360B6618DFA82A00F506B1 /* MUCameraViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MUCameraViewViewController.m; path = ../REFrostedViewController/REFrostedViewControllerStoryboards/MUCameraViewViewController.m; sourceTree = "<group>"; };
 		495A64CF191E8B50001E8EBA /* IMAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMAudioViewController.h; path = ../IMAudioViewController.h; sourceTree = "<group>"; };
 		495A64D0191E8B50001E8EBA /* IMAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMAudioViewController.m; path = ../IMAudioViewController.m; sourceTree = "<group>"; };
+		49DCB5C919245AD200822160 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SenTestingKit.framework; sourceTree = "<group>"; };
+		49DCB5CC19245B5800822160 /* FFCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFCircularProgressView.h; sourceTree = "<group>"; };
+		49DCB5CD19245B5800822160 /* FFCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFCircularProgressView.m; sourceTree = "<group>"; };
+		49DCB5CE19245B5800822160 /* UIColor+iOS7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+iOS7.h"; sourceTree = "<group>"; };
+		49DCB5CF19245B5800822160 /* UIColor+iOS7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+iOS7.m"; sourceTree = "<group>"; };
 		49FED29418D79129004BE4E0 /* InteractiveMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49FED29718D79129004BE4E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49FED29918D79129004BE4E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -157,6 +165,7 @@
 				49FED29A18D79129004BE4E0 /* CoreGraphics.framework in Frameworks */,
 				49FED29C18D79129004BE4E0 /* UIKit.framework in Frameworks */,
 				49FED29818D79129004BE4E0 /* Foundation.framework in Frameworks */,
+				49DCB5CA19245AD200822160 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +234,17 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		49DCB5CB19245B5800822160 /* FFCircularProgressView */ = {
+			isa = PBXGroup;
+			children = (
+				49DCB5CC19245B5800822160 /* FFCircularProgressView.h */,
+				49DCB5CD19245B5800822160 /* FFCircularProgressView.m */,
+				49DCB5CE19245B5800822160 /* UIColor+iOS7.h */,
+				49DCB5CF19245B5800822160 /* UIColor+iOS7.m */,
+			);
+			path = FFCircularProgressView;
+			sourceTree = "<group>";
+		};
 		49FED28B18D79129004BE4E0 = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +280,8 @@
 		49FED29D18D79129004BE4E0 /* InteractiveMuseum */ = {
 			isa = PBXGroup;
 			children = (
+				49DCB5C919245AD200822160 /* SenTestingKit.framework */,
+				49DCB5CB19245B5800822160 /* FFCircularProgressView */,
 				5D480C3D18EB1ACE00D5A7D8 /* hpple */,
 				49FED2A618D79129004BE4E0 /* IMAppDelegate.h */,
 				49FED2A718D79129004BE4E0 /* IMAppDelegate.m */,
@@ -478,7 +500,9 @@
 				492AB72518D7CBD9001B9559 /* CHTCollectionViewWaterfallFooter.m in Sources */,
 				5D252C5218E20BF400195CB4 /* IMDetailViewController.m in Sources */,
 				5D480C5A18EB6BA000D5A7D8 /* IMAudioPlayerView.m in Sources */,
+				49DCB5D019245B5800822160 /* FFCircularProgressView.m in Sources */,
 				492AB72318D7CBD9001B9559 /* CHTCollectionViewWaterfallCell.m in Sources */,
+				49DCB5D119245B5800822160 /* UIColor+iOS7.m in Sources */,
 				492AB6DD18D7A0F8001B9559 /* DEMONavigationController.m in Sources */,
 				495A64D1191E8B50001E8EBA /* IMAudioViewController.m in Sources */,
 				492AB6DE18D7A0F8001B9559 /* DEMORootViewController.m in Sources */,
@@ -633,6 +657,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/InteractiveMuseum",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InteractiveMuseum/InteractiveMuseum-Prefix.pch";
 				INFOPLIST_FILE = "InteractiveMuseum/InteractiveMuseum-Info.plist";
@@ -650,6 +678,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/InteractiveMuseum",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InteractiveMuseum/InteractiveMuseum-Prefix.pch";
 				INFOPLIST_FILE = "InteractiveMuseum/InteractiveMuseum-Info.plist";

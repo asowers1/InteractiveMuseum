@@ -7,13 +7,13 @@
 //
 
 #import "IMAudioViewController.h"
-
+#import "FFCircularProgressView.h"
 @interface IMAudioViewController ()
 {
     AVAudioRecorder *recorder;
     AVAudioPlayer *player;
 }
-
+@property (strong) FFCircularProgressView *circularPV;
 
 @end
 
@@ -63,6 +63,11 @@
     
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:116.0/255.0 green:191.0/255.0 blue:185.0/255.0 alpha:1.0];
     count=0;
+    
+    self.circularPV = [[FFCircularProgressView alloc] initWithFrame:CGRectMake(40, 40, 80, 80)];
+    _circularPV.center = self.view.center;
+    
+
 
 }
 
@@ -116,7 +121,32 @@
                                                      selector:@selector(counter)
                                                      userInfo:nil
                                                       repeats:1];
+        [self.view addSubview:_circularPV];
         
+        [_circularPV startSpinProgressBackgroundLayer];
+        
+        double delayInSeconds = 2.5;
+        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(void){
+            for (float i=0; i<1.1; i+=0.01F) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [_circularPV setProgress:i];
+                });
+                usleep(100000);
+            }
+            
+            double delayInSeconds = 2.0;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                [_circularPV setProgress:0];
+            });
+        });
+        
+        delayInSeconds = 2;
+        popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            [_circularPV stopSpinProgressBackgroundLayer];
+        });
         // Start recording
         [recorder record];
         [recordPauseButton setTitle:@"Pause" forState:UIControlStateNormal];

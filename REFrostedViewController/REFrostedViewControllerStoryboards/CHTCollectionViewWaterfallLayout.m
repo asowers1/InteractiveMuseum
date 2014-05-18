@@ -32,7 +32,7 @@ NSString *const CHTCollectionElementKindSectionFooter = @"CHTCollectionElementKi
 @implementation CHTCollectionViewWaterfallLayout
 
 /// How many items to be union into a single rectangle
-const NSInteger unionSize = 20;
+const NSInteger unionSize = 10;
 
 #pragma mark - Public Accessors
 - (void)setColumnCount:(NSInteger)columnCount {
