@@ -187,16 +187,6 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ4-oG-ViU">
-                                        <rect key="frame" x="99" y="33" width="130" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Test send to server">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="sendButton:" destination="fOn-L2-JSf" eventType="touchUpInside" id="41e-gf-CuT"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
@@ -353,16 +343,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gg-wN-ZXS">
-                                <rect key="frame" x="207" y="321" width="30" height="30"/>
+                                <rect key="frame" x="238" y="304" width="30" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="picture-25">
+                                <state key="normal" image="memiorObject">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvT-tY-CBs">
-                                <rect key="frame" x="279" y="321" width="30" height="30"/>
+                                <rect key="frame" x="276" y="302" width="24" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="upload_filled-25">
+                                <state key="normal" image="sharewTransparent">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -370,9 +360,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJd-D7-4a3">
-                                <rect key="frame" x="245" y="323" width="26" height="26"/>
+                                <rect key="frame" x="198" y="304" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="microphone-26">
+                                <state key="normal" image="mic">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -384,7 +374,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="E3q-Ss-uw3">
                         <barButtonItem key="leftBarButtonItem" image="memiorGrid" id="eOh-Hr-0Fh">
-                            <color key="tintColor" red="0.53333336109999996" green="0.79215693470000004" blue="0.75294125079999996" alpha="1" colorSpace="deviceRGB"/>
+                            <color key="tintColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="showMenu:" destination="F3v-kU-MJz" id="Pkg-lD-rPE"/>
                             </connections>
@@ -435,9 +425,9 @@
     <resources>
         <image name="currentCam" width="32" height="32"/>
         <image name="memiorGrid" width="26" height="26"/>
-        <image name="microphone-26" width="26" height="26"/>
-        <image name="picture-25" width="25" height="25"/>
-        <image name="upload_filled-25" width="25" height="25"/>
+        <image name="memiorObject" width="256" height="256"/>
+        <image name="mic" width="171" height="178"/>
+        <image name="sharewTransparent" width="38" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IMDetailViewController : UIViewController <UIAlertViewDelegate, UIActionSheetDelegate>
+@interface IMDetailViewController : UIViewController <UIAlertViewDelegate, UIActionSheetDelegate>{
+    int waterfallValue;
+    IMMeniorManager * data;
+}
 
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UIButton *memiorButton;
+
 @end

@@ -37,6 +37,17 @@
 	if (![_displayString isEqualToString:displayString]) {
 		_displayString = [displayString copy];
 		self.displayLabel.text = _displayString;
+        IMMeniorManager * data = [[IMMeniorManager alloc] init];
+        [data openDatabase];
+        
+        NSString * imgRef = [data getObjectFromIndex:[displayString intValue]];
+        
+        NSLog(@"TEST :%@:%d:",imgRef,([displayString intValue]+1));
+        
+        _displayImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",imgRef]];
+        
+        
+/*
         if([displayString isEqual:@"0"]){
             _displayImage.image = [UIImage imageNamed:@"0.jpg"];
         }else if([displayString isEqual:@"1"]){
@@ -56,7 +67,7 @@
         }else if([displayString isEqual:@"8"]){
             _displayImage.image = [UIImage imageNamed:@"8.jpg"];
         }
-        
+*/        
 	}
 }
 

@@ -13,6 +13,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    //IMMeniorManager * data = [[IMMeniorManager alloc] init];
+    //[data buildInitialDatabase];
+    //[data openDatabase];
+    //NSLog(@"TEST:%@:",[data getObjectFromIndex:1]);
     return YES;
 }
 							

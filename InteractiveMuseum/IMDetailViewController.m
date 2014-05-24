@@ -51,21 +51,35 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    data = nil;
+    data = [[IMMeniorManager alloc] init];
+    //[data setupDatabaseSession];
+    [self loadArtPeiceFromSQLite];
     self.artPiece = [[IMArtPiece alloc] init];
-    [self loadHTMLIntoView];
+    [self loadArtPeiceFromSQLite];
     [self setUpView];
+}
+
+-(void)loadArtPeiceFromSQLite
+{
+    
+    // get current view from global data
+    // set current waterfall value
+    // load from hmtl
+    [self loadHTMLIntoView:[NSString stringWithFormat:@"Object%d",waterfallValue]];
+    
 }
 
 - (IBAction)showMenu:(id)sender {
     [self.frostedViewController presentMenuViewController];
 }
 
-- (void)loadHTMLIntoView
+- (void)loadHTMLIntoView:(NSString *)toLoad
 {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Object1" ofType:@"html"];
-    NSData *data = [[NSFileManager defaultManager] contentsAtPath:path];
+    NSString *path = [[NSBundle mainBundle] pathForResource:toLoad ofType:@"html"];
+    NSData * HTMLdata = [[NSFileManager defaultManager] contentsAtPath:path];
     
-    TFHpple *parser = [TFHpple hppleWithHTMLData:data];
+    TFHpple *parser = [TFHpple hppleWithHTMLData:HTMLdata];
     NSString *picImageQueryString = @"//img[@class='chosen-pic']";
     NSString *picInfoQueryString = @"//p[@class='picinfo']";
     NSString *picDescriptionQueryString = @"//div[@class='picdesc']/p";
@@ -129,8 +143,11 @@
     self.titleLabel.text = self.artPiece.title;
     self.authorLabel.text = self.artPiece.author;
     self.collectionLabel.text = self.artPiece.collection;
-    self.descriptionTextView.text = [self.artPiece.descriptions objectAtIndex:0];
-    self.wikipediaDescriptionTextView.text = [self.artPiece.wikipediaDescriptions objectAtIndex:0];
+    if([self.artPiece.descriptions count]>0)
+        self.descriptionTextView.text = [self.artPiece.descriptions objectAtIndex:0];
+    
+    if([self.artPiece.wikipediaDescriptions count]>0)
+        self.wikipediaDescriptionTextView.text = [self.artPiece.wikipediaDescriptions objectAtIndex:0];
     
     IMAudioPlayerView *audioPlayerView = [[IMAudioPlayerView alloc] initWithFrame:CGRectMake(225, 139, 75, 55) audioFile:self.artPiece.audioFileName andImageFile:self.artPiece.imageName];
     [self.view addSubview:audioPlayerView];
