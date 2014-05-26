@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "49FED29318D79129004BE4E0"
                BuildableName = "InteractiveMuseum.app"
-               BlueprintName = "InteractiveMuseum"
-               ReferencedContainer = "container:InteractiveMuseum.xcodeproj">
+               BlueprintName = "EsVerta LLC"
+               ReferencedContainer = "container:EsVerta LLC.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "49FED2B718D79129004BE4E0"
                BuildableName = "InteractiveMuseumTests.xctest"
-               BlueprintName = "InteractiveMuseumTests"
-               ReferencedContainer = "container:InteractiveMuseum.xcodeproj">
+               BlueprintName = "EsVerta LLCTests"
+               ReferencedContainer = "container:EsVerta LLC.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "49FED29318D79129004BE4E0"
             BuildableName = "InteractiveMuseum.app"
-            BlueprintName = "InteractiveMuseum"
-            ReferencedContainer = "container:InteractiveMuseum.xcodeproj">
+            BlueprintName = "EsVerta LLC"
+            ReferencedContainer = "container:EsVerta LLC.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "49FED29318D79129004BE4E0"
             BuildableName = "InteractiveMuseum.app"
-            BlueprintName = "InteractiveMuseum"
-            ReferencedContainer = "container:InteractiveMuseum.xcodeproj">
+            BlueprintName = "EsVerta LLC"
+            ReferencedContainer = "container:EsVerta LLC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "49FED29318D79129004BE4E0"
             BuildableName = "InteractiveMuseum.app"
-            BlueprintName = "InteractiveMuseum"
-            ReferencedContainer = "container:InteractiveMuseum.xcodeproj">
+            BlueprintName = "EsVerta LLC"
+            ReferencedContainer = "container:EsVerta LLC.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

@@ -11,6 +11,7 @@
 #import "TFHpple.h"
 #import "IMArtPiece.h"
 #import "IMAudioPlayerView.h"
+#import "IMMeniorManager.h"
 
 @interface IMDetailViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
@@ -66,7 +67,11 @@
     // get current view from global data
     // set current waterfall value
     // load from hmtl
-    [self loadHTMLIntoView:[NSString stringWithFormat:@"Object%d",waterfallValue]];
+    IMMeniorManager * database = [[IMMeniorManager alloc] init];
+    [database openDatabase];
+    NSString * waterfallIndex = [database getSelectionIndex];
+    [database closeDatabase];
+    [self loadHTMLIntoView:waterfallIndex];
     
 }
 

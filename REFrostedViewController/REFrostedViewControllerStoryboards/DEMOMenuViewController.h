@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "REFrostedViewController.h"
 #import "CHTCollectionViewWaterfallLayout.h"
-@interface DEMOMenuViewController : UITableViewController <UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout>
+@interface DEMOMenuViewController : UITableViewController <UICollectionViewDataSource, CHTCollectionViewDelegateWaterfallLayout>{
+    int CELL_COUNT;
+}
 @property (nonatomic, strong) IBOutlet UICollectionView *collectionView;
 @end

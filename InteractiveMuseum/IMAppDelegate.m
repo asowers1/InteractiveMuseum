@@ -7,16 +7,19 @@
 //
 
 #import "IMAppDelegate.h"
-
+#import "IMMeniorManager.h"
 @implementation IMAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    //IMMeniorManager * data = [[IMMeniorManager alloc] init];
+    
+    IMMeniorManager * data = [[IMMeniorManager alloc] init];
     //[data buildInitialDatabase];
-    //[data openDatabase];
-    //NSLog(@"TEST:%@:",[data getObjectFromIndex:1]);
+    [data openDatabase];
+    NSLog(@"DATA:%@:",[data getSelectionIndex]);
+    [data closeDatabase];
+    
     return YES;
 }
 							

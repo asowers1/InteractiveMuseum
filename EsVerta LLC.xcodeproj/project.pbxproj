@@ -57,6 +57,8 @@
 		49DCB67B192EB7B300822160 /* Object7.html in Resources */ = {isa = PBXBuildFile; fileRef = 49DCB673192EB7B300822160 /* Object7.html */; };
 		49DCB67C192EB7B300822160 /* Object8.html in Resources */ = {isa = PBXBuildFile; fileRef = 49DCB674192EB7B300822160 /* Object8.html */; };
 		49DCB67D192EB7B300822160 /* Object9.html in Resources */ = {isa = PBXBuildFile; fileRef = 49DCB675192EB7B300822160 /* Object9.html */; };
+		49DCB67F1933BDF900822160 /* database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 49DCB67E1933BDF900822160 /* database.sqlite */; };
+		49DCB6811933C80200822160 /* file1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49DCB6801933C80200822160 /* file1.jpg */; };
 		49FED29818D79129004BE4E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29718D79129004BE4E0 /* Foundation.framework */; };
 		49FED29A18D79129004BE4E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29918D79129004BE4E0 /* CoreGraphics.framework */; };
 		49FED29C18D79129004BE4E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29B18D79129004BE4E0 /* UIKit.framework */; };
@@ -173,19 +175,21 @@
 		49DCB673192EB7B300822160 /* Object7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Object7.html; sourceTree = "<group>"; };
 		49DCB674192EB7B300822160 /* Object8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Object8.html; sourceTree = "<group>"; };
 		49DCB675192EB7B300822160 /* Object9.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Object9.html; sourceTree = "<group>"; };
-		49FED29418D79129004BE4E0 /* InteractiveMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InteractiveMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49DCB67E1933BDF900822160 /* database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.sqlite; sourceTree = "<group>"; };
+		49DCB6801933C80200822160 /* file1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = file1.jpg; sourceTree = "<group>"; };
+		49FED29418D79129004BE4E0 /* EsVerta LLC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EsVerta LLC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49FED29718D79129004BE4E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		49FED29918D79129004BE4E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		49FED29B18D79129004BE4E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		49FED29F18D79129004BE4E0 /* InteractiveMuseum-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InteractiveMuseum-Info.plist"; sourceTree = "<group>"; };
+		49FED29F18D79129004BE4E0 /* EsVerta LLC-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EsVerta LLC-Info.plist"; sourceTree = "<group>"; };
 		49FED2A118D79129004BE4E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		49FED2A318D79129004BE4E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		49FED2A518D79129004BE4E0 /* InteractiveMuseum-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InteractiveMuseum-Prefix.pch"; sourceTree = "<group>"; };
+		49FED2A518D79129004BE4E0 /* EsVerta LLC-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EsVerta LLC-Prefix.pch"; sourceTree = "<group>"; };
 		49FED2A618D79129004BE4E0 /* IMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMAppDelegate.h; sourceTree = "<group>"; };
 		49FED2A718D79129004BE4E0 /* IMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IMAppDelegate.m; sourceTree = "<group>"; };
 		49FED2AA18D79129004BE4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		49FED2AD18D79129004BE4E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		49FED2B818D79129004BE4E0 /* InteractiveMuseumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InteractiveMuseumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		49FED2B818D79129004BE4E0 /* EsVerta LLCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "EsVerta LLCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49FED2B918D79129004BE4E0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		49FED2C118D79129004BE4E0 /* InteractiveMuseumTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InteractiveMuseumTests-Info.plist"; sourceTree = "<group>"; };
 		49FED2C318D79129004BE4E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -275,6 +279,7 @@
 		4934141018EA7656005CB997 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				49DCB6801933C80200822160 /* file1.jpg */,
 				4934141118EA7656005CB997 /* 0.jpg */,
 				4934141218EA7656005CB997 /* 1.jpg */,
 				4934141318EA7656005CB997 /* 2.jpg */,
@@ -319,8 +324,8 @@
 		49FED29518D79129004BE4E0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				49FED29418D79129004BE4E0 /* InteractiveMuseum.app */,
-				49FED2B818D79129004BE4E0 /* InteractiveMuseumTests.xctest */,
+				49FED29418D79129004BE4E0 /* EsVerta LLC.app */,
+				49FED2B818D79129004BE4E0 /* EsVerta LLCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -392,6 +397,7 @@
 		49FED29E18D79129004BE4E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				49DCB67E1933BDF900822160 /* database.sqlite */,
 				5D480C5118EB625A00D5A7D8 /* Object1.Symbolism_of_life.mp3 */,
 				49DCB658192E9ABA00822160 /* Object2.mp3 */,
 				49DCB659192E9ABA00822160 /* Object3.mp3 */,
@@ -413,10 +419,10 @@
 				49DCB673192EB7B300822160 /* Object7.html */,
 				49DCB674192EB7B300822160 /* Object8.html */,
 				49DCB675192EB7B300822160 /* Object9.html */,
-				49FED29F18D79129004BE4E0 /* InteractiveMuseum-Info.plist */,
+				49FED29F18D79129004BE4E0 /* EsVerta LLC-Info.plist */,
 				49FED2A018D79129004BE4E0 /* InfoPlist.strings */,
 				49FED2A318D79129004BE4E0 /* main.m */,
-				49FED2A518D79129004BE4E0 /* InteractiveMuseum-Prefix.pch */,
+				49FED2A518D79129004BE4E0 /* EsVerta LLC-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -464,9 +470,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		49FED29318D79129004BE4E0 /* InteractiveMuseum */ = {
+		49FED29318D79129004BE4E0 /* EsVerta LLC */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 49FED2C918D79129004BE4E0 /* Build configuration list for PBXNativeTarget "InteractiveMuseum" */;
+			buildConfigurationList = 49FED2C918D79129004BE4E0 /* Build configuration list for PBXNativeTarget "EsVerta LLC" */;
 			buildPhases = (
 				49FED29018D79129004BE4E0 /* Sources */,
 				49FED29118D79129004BE4E0 /* Frameworks */,
@@ -476,14 +482,14 @@
 			);
 			dependencies = (
 			);
-			name = InteractiveMuseum;
+			name = "EsVerta LLC";
 			productName = InteractiveMuseum;
-			productReference = 49FED29418D79129004BE4E0 /* InteractiveMuseum.app */;
+			productReference = 49FED29418D79129004BE4E0 /* EsVerta LLC.app */;
 			productType = "com.apple.product-type.application";
 		};
-		49FED2B718D79129004BE4E0 /* InteractiveMuseumTests */ = {
+		49FED2B718D79129004BE4E0 /* EsVerta LLCTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 49FED2CC18D79129004BE4E0 /* Build configuration list for PBXNativeTarget "InteractiveMuseumTests" */;
+			buildConfigurationList = 49FED2CC18D79129004BE4E0 /* Build configuration list for PBXNativeTarget "EsVerta LLCTests" */;
 			buildPhases = (
 				49FED2B418D79129004BE4E0 /* Sources */,
 				49FED2B518D79129004BE4E0 /* Frameworks */,
@@ -494,9 +500,9 @@
 			dependencies = (
 				49FED2BE18D79129004BE4E0 /* PBXTargetDependency */,
 			);
-			name = InteractiveMuseumTests;
+			name = "EsVerta LLCTests";
 			productName = InteractiveMuseumTests;
-			productReference = 49FED2B818D79129004BE4E0 /* InteractiveMuseumTests.xctest */;
+			productReference = 49FED2B818D79129004BE4E0 /* EsVerta LLCTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -522,7 +528,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 49FED28F18D79129004BE4E0 /* Build configuration list for PBXProject "InteractiveMuseum" */;
+			buildConfigurationList = 49FED28F18D79129004BE4E0 /* Build configuration list for PBXProject "EsVerta LLC" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -535,8 +541,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				49FED29318D79129004BE4E0 /* InteractiveMuseum */,
-				49FED2B718D79129004BE4E0 /* InteractiveMuseumTests */,
+				49FED29318D79129004BE4E0 /* EsVerta LLC */,
+				49FED2B718D79129004BE4E0 /* EsVerta LLCTests */,
 			);
 		};
 /* End PBXProject section */
@@ -558,6 +564,7 @@
 				49DCB67B192EB7B300822160 /* Object7.html in Resources */,
 				49FED2AE18D79129004BE4E0 /* Main_iPad.storyboard in Resources */,
 				4934141A18EA7656005CB997 /* 1.jpg in Resources */,
+				49DCB67F1933BDF900822160 /* database.sqlite in Resources */,
 				49DCB67D192EB7B300822160 /* Object9.html in Resources */,
 				49DCB65B192E9ABA00822160 /* Object3.mp3 in Resources */,
 				49FED2AB18D79129004BE4E0 /* Main_iPhone.storyboard in Resources */,
@@ -568,6 +575,7 @@
 				49DCB65A192E9ABA00822160 /* Object2.mp3 in Resources */,
 				49DCB665192E9ACE00822160 /* Object1.jpg in Resources */,
 				49DCB666192E9ACE00822160 /* Object2.jpg in Resources */,
+				49DCB6811933C80200822160 /* file1.jpg in Resources */,
 				49DCB669192E9ACE00822160 /* Object5.jpg in Resources */,
 				4934141D18EA7656005CB997 /* 4.jpg in Resources */,
 				49DCB667192E9ACE00822160 /* Object3.jpg in Resources */,
@@ -641,7 +649,7 @@
 /* Begin PBXTargetDependency section */
 		49FED2BE18D79129004BE4E0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 49FED29318D79129004BE4E0 /* InteractiveMuseum */;
+			target = 49FED29318D79129004BE4E0 /* EsVerta LLC */;
 			targetProxy = 49FED2BD18D79129004BE4E0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -776,14 +784,14 @@
 					"$(PROJECT_DIR)/InteractiveMuseum",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "InteractiveMuseum/InteractiveMuseum-Prefix.pch";
-				INFOPLIST_FILE = "InteractiveMuseum/InteractiveMuseum-Info.plist";
+				GCC_PREFIX_HEADER = "InteractiveMuseum/EsVerta LLC-Prefix.pch";
+				INFOPLIST_FILE = "InteractiveMuseum/EsVerta LLC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/InteractiveMuseum",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "EsVerta LLC";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -801,14 +809,14 @@
 					"$(PROJECT_DIR)/InteractiveMuseum",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "InteractiveMuseum/InteractiveMuseum-Prefix.pch";
-				INFOPLIST_FILE = "InteractiveMuseum/InteractiveMuseum-Info.plist";
+				GCC_PREFIX_HEADER = "InteractiveMuseum/EsVerta LLC-Prefix.pch";
+				INFOPLIST_FILE = "InteractiveMuseum/EsVerta LLC-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/InteractiveMuseum",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "EsVerta LLC";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -830,7 +838,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "InteractiveMuseumTests/InteractiveMuseumTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "EsVerta LLCTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -848,7 +856,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InteractiveMuseum/InteractiveMuseum-Prefix.pch";
 				INFOPLIST_FILE = "InteractiveMuseumTests/InteractiveMuseumTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "EsVerta LLCTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -857,7 +865,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		49FED28F18D79129004BE4E0 /* Build configuration list for PBXProject "InteractiveMuseum" */ = {
+		49FED28F18D79129004BE4E0 /* Build configuration list for PBXProject "EsVerta LLC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				49FED2C718D79129004BE4E0 /* Debug */,
@@ -866,7 +874,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		49FED2C918D79129004BE4E0 /* Build configuration list for PBXNativeTarget "InteractiveMuseum" */ = {
+		49FED2C918D79129004BE4E0 /* Build configuration list for PBXNativeTarget "EsVerta LLC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				49FED2CA18D79129004BE4E0 /* Debug */,
@@ -875,7 +883,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		49FED2CC18D79129004BE4E0 /* Build configuration list for PBXNativeTarget "InteractiveMuseumTests" */ = {
+		49FED2CC18D79129004BE4E0 /* Build configuration list for PBXNativeTarget "EsVerta LLCTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				49FED2CD18D79129004BE4E0 /* Debug */,

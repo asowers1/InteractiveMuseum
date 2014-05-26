@@ -18,11 +18,11 @@
 #import "CHTCollectionViewWaterfallHeader.h"
 #import "CHTCollectionViewWaterfallFooter.h"
 
-#define CELL_COUNT 8
+//#define CELL_COUNT 8
 #define CELL_IDENTIFIER @"WaterfallCell"
 #define HEADER_IDENTIFIER @"WaterfallHeader"
 #define FOOTER_IDENTIFIER @"WaterfallFooter"
-
+#import "IMMeniorManager.h"
 
 
 @interface DEMOMenuViewController ()
@@ -110,6 +110,10 @@
 {
     //find number of items from memoir entries
     // set number of columns from number of items
+    IMMeniorManager * data = [[IMMeniorManager alloc] init];
+    [data openDatabase];
+    CELL_COUNT = [data getObjectCount];
+    [data closeDatabase];
 }
 
 #pragma mark -
@@ -278,7 +282,7 @@
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-    return 2;
+    return 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -311,8 +315,15 @@
     IMDetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"detailController"];
     navigationController.viewControllers = @[detailViewController];
     
-    // TODO: pass the object to the detailViewController
-    
+    NSLog(@"CELL: %lu",(unsigned long)[indexPath indexAtPosition:[indexPath length]-1]);
+    int path = (int)[indexPath indexAtPosition:[indexPath length]-1];
+    IMMeniorManager *data = [[IMMeniorManager alloc] init];
+    [data openDatabase];
+    NSString * string = [data getObjectFromIndex:path];
+    NSLog(@"DATA:%@:",string);
+    [data setSelectionIndex:string];
+    [data closeDatabase];
+
     self.frostedViewController.contentViewController = navigationController;
     [self.frostedViewController hideMenuViewController];
 

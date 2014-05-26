@@ -127,31 +127,29 @@
 }
 
 
-- (IBAction)sendButton:(id)sender {
-    [self sendPhotoToServer];
+- (IBAction):(id)sender {
+    NSData* fileData = [[NSData alloc] initWithContentsOfFile:@"file1.jpg"];
+    [self uploadImage:fileData filename:@"file1.jpg"];
 }
 
 - (void)sendPhotoToServer {
-    NSData* fileData = [[NSData alloc] initWithContentsOfFile:@"photo.jpg"];
+    NSData* fileData = [[NSData alloc] initWithContentsOfFile:@"test.png"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:[NSURL URLWithString:@"http://54.84.76.140:8000"]];
+    [request setURL:[NSURL URLWithString:@"54.86.61.242:8001"]];
     [request setHTTPMethod:@"POST"];
     
     NSString *boundary = @"0xKhTmLbOuNdArY"; // This is important! //NSURLConnection is very sensitive to format.
     NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary];
     [request addValue:contentType forHTTPHeaderField: @"Content-Type"];
     
+    
     NSMutableData *body = [NSMutableData data];
     
-    /*
     [body appendData:[[NSString stringWithFormat:@"--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
     [body appendData:[@"Content-Disposition: form-data; name=\"param1\"; filename=\"thefilename\"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
     [body appendData:[@"Content-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
-    */
     
     [body appendData:[NSData dataWithData:fileData]];
-    
-    /*
     [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
     [body appendData:[@"Content-Disposition: form-data; name=\"param2\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
     [body appendData:[@"paramstringvalue1" dataUsingEncoding:NSUTF8StringEncoding]];
@@ -159,7 +157,7 @@
     [body appendData:[@"Content-Disposition: form-data; name=\"param3\"\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
     [body appendData:[@"paramstringvalue2" dataUsingEncoding:NSUTF8StringEncoding]];
     [body appendData:[[NSString stringWithFormat:@"r\n--%@--\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
-     */
+     
     // setting the body of the post to the reqeust
     [request setHTTPBody:body];
     
@@ -167,6 +165,44 @@
     NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
     NSString* newStr = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
     NSLog(@"DATA: %@",newStr);
+}
+
+- (BOOL)uploadImage:(NSData *)imageData filename:(NSString *)filename{
+    
+    NSLog(@"uploading");
+    
+    NSString *urlString = @"54.86.61.242:8001";
+    
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setURL:[NSURL URLWithString:urlString]];
+    [request setHTTPMethod:@"POST"];
+    
+    NSString *boundary = @"0xKhTmLbOuNdArY";
+    NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary];
+    [request addValue:contentType forHTTPHeaderField: @"Content-Type"];
+    
+    NSMutableData *body = [NSMutableData data];
+    
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    //Set the filename
+    [body appendData:[[NSString stringWithString:[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"userfile\"; filename=\"%@\"\r\n",filename]] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [body appendData:[@"Content-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    //append the image data
+    [body appendData:[NSData dataWithData:imageData]];
+    
+    [body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    [request setHTTPBody:body];
+    
+    NSData *returnData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSString *returnString = [[NSString alloc] initWithData:returnData encoding:NSUTF8StringEncoding];
+    
+    NSLog(@"return string: %@",returnString);
+    
+    return ([returnString isEqualToString:@"OK"]);
 }
 
 

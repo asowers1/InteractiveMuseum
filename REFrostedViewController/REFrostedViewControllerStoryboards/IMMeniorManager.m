@@ -18,13 +18,6 @@
     return self;
 }
 
-
--(void)addMemiorObject
-{
-    
-    
-}
-
 -(BOOL)openDatabase
 {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -52,35 +45,74 @@
     [INITdatabase open];
     
     [INITdatabase executeUpdate:@"create table object(name text primary key, waterfallIndex int)"];
-    [INITdatabase executeUpdate:@"create table currentObject(name text primary key, waterfallIndex int)"];
-    
-    
-    // Building the string ourself
-    //NSString *query = [NSString stringWithFormat:@"insert into user values ('%@', %d)",@"sally", 25];
-    //[database executeUpdate:query];
-    
-    // Let fmdb do the work
-    //[database executeUpdate:@"insert into user(name, age) values(?,?)",@"bob",[NSNumber numberWithInt:25],nil];
-    
+    [INITdatabase executeUpdate:@"create table current(name text primary key)"];
+
     [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex) values(?,?)",@"Object1",[NSNumber numberWithInt:0],nil];
     [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex) values(?,?)",@"Object2",[NSNumber numberWithInt:1],nil];
     [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex) values(?,?)",@"Object3",[NSNumber numberWithInt:2],nil];
+    
+    [INITdatabase executeUpdate:@"insert into current(name) values(?)",@"Object1",nil];
+    
+    
+    int count=0;
     
     FMResultSet *results = [INITdatabase executeQuery:@"select * from object"];
     while([results next]) {
         NSString *name = [results stringForColumn:@"name"];
         NSInteger index  = [results intForColumn:@"waterfallIndex"];
-        NSLog(@"Initial data: %@ - %d",name, index);
+        NSLog(@"Initial data: %@ - %ld",name, (long)index);
+        count++;
     }
-    
+    NSLog(@"COUNT: %d",count);
+
     [INITdatabase close];
     
+}
+
+-(void)setSelectionIndex:(NSString *)object
+{
+    
+    [database executeUpdate:@"UPDATE current SET name = ? WHERE rowid = ?", object, [NSNumber numberWithInt:1],nil];
+}
+
+-(NSString *)getSelectionIndex
+{
+    FMResultSet *result = [database executeQuery:@"SELECT * FROM current"];
+    while([result next]){
+        NSString * string = [result stringForColumn:@"name"];
+        //NSString * rowid = [result stringForColumn:@"rowid"];
+        //NSLog(@"OUTDATA:%@:%@:",string,rowid);
+        // to do: assert for invalid selection
+        return string;
+    }
+    return @"error";
+}
+
+-(void)addMemiorObject
+{
+    // count number of objects in database
+    // insert new object based on count plus one
+    // return
+    
+}
+
+-(int)getObjectCount
+{
+    int count = 0;
+    FMResultSet *results = [database executeQuery:@"select * from object"];
+    while([results next]){
+        count++;
+    }
+    return count;
 }
 
 -(int)getWaterfallIndex:(NSString *)object
 {
     FMResultSet *result = [database executeQuery:[NSString stringWithFormat:@"select waterfallIndex from object where name = %@",object]];
-    return [result intForColumn:@"waterfallIndex"];
+    while([result next]){
+        return [result intForColumn:@"waterfallIndex"];
+    }
+    return -1;
 }
 
 // set the name of object and index
@@ -96,7 +128,6 @@
     FMResultSet *results = [database executeQuery:[NSString stringWithFormat:@"select * from object where waterfallIndex = %d",index]];
     while([results next]) {
         return [results stringForColumn:@"name"];
-
     }
     return @"Error";
 }

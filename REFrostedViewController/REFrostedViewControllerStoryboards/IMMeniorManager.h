@@ -15,8 +15,11 @@
 -(void)addMemiorObject;
 -(void)buildInitialDatabase;
 -(NSString *)getObjectFromIndex:(int)index;
+-(void)setSelectionIndex:(NSString *)object;
+-(NSString *)getSelectionIndex;
 -(BOOL)openDatabase;
 -(BOOL)closeDatabase;
+-(int)getObjectCount;
 @property(strong, nonatomic) NSString * query;
 
 @end
