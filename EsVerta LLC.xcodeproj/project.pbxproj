@@ -57,7 +57,6 @@
 		49DCB67B192EB7B300822160 /* Object7.html in Resources */ = {isa = PBXBuildFile; fileRef = 49DCB673192EB7B300822160 /* Object7.html */; };
 		49DCB67C192EB7B300822160 /* Object8.html in Resources */ = {isa = PBXBuildFile; fileRef = 49DCB674192EB7B300822160 /* Object8.html */; };
 		49DCB67D192EB7B300822160 /* Object9.html in Resources */ = {isa = PBXBuildFile; fileRef = 49DCB675192EB7B300822160 /* Object9.html */; };
-		49DCB67F1933BDF900822160 /* database.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 49DCB67E1933BDF900822160 /* database.sqlite */; };
 		49DCB6811933C80200822160 /* file1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49DCB6801933C80200822160 /* file1.jpg */; };
 		49FED29818D79129004BE4E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29718D79129004BE4E0 /* Foundation.framework */; };
 		49FED29A18D79129004BE4E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49FED29918D79129004BE4E0 /* CoreGraphics.framework */; };
@@ -175,7 +174,6 @@
 		49DCB673192EB7B300822160 /* Object7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Object7.html; sourceTree = "<group>"; };
 		49DCB674192EB7B300822160 /* Object8.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Object8.html; sourceTree = "<group>"; };
 		49DCB675192EB7B300822160 /* Object9.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Object9.html; sourceTree = "<group>"; };
-		49DCB67E1933BDF900822160 /* database.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = database.sqlite; sourceTree = "<group>"; };
 		49DCB6801933C80200822160 /* file1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = file1.jpg; sourceTree = "<group>"; };
 		49FED29418D79129004BE4E0 /* EsVerta LLC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EsVerta LLC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		49FED29718D79129004BE4E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -397,7 +395,6 @@
 		49FED29E18D79129004BE4E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				49DCB67E1933BDF900822160 /* database.sqlite */,
 				5D480C5118EB625A00D5A7D8 /* Object1.Symbolism_of_life.mp3 */,
 				49DCB658192E9ABA00822160 /* Object2.mp3 */,
 				49DCB659192E9ABA00822160 /* Object3.mp3 */,
@@ -564,7 +561,6 @@
 				49DCB67B192EB7B300822160 /* Object7.html in Resources */,
 				49FED2AE18D79129004BE4E0 /* Main_iPad.storyboard in Resources */,
 				4934141A18EA7656005CB997 /* 1.jpg in Resources */,
-				49DCB67F1933BDF900822160 /* database.sqlite in Resources */,
 				49DCB67D192EB7B300822160 /* Object9.html in Resources */,
 				49DCB65B192E9ABA00822160 /* Object3.mp3 in Resources */,
 				49FED2AB18D79129004BE4E0 /* Main_iPhone.storyboard in Resources */,

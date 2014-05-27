@@ -127,11 +127,7 @@
 }
 
 
-- (IBAction):(id)sender {
-    NSData* fileData = [[NSData alloc] initWithContentsOfFile:@"file1.jpg"];
-    [self uploadImage:fileData filename:@"file1.jpg"];
-}
-
+ 
 - (void)sendPhotoToServer {
     NSData* fileData = [[NSData alloc] initWithContentsOfFile:@"test.png"];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];

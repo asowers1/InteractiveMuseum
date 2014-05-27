@@ -20,9 +20,17 @@
 
 -(BOOL)openDatabase
 {
+    /*NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsPath = [paths objectAtIndex:0];
+    NSString *path = [docsPath stringByAppendingPathComponent:@"data.sqlite"];
+    database = [self templateDatabase];//[FMDatabase databaseWithPath:path];
+    */
+    
+    [self createCopyOfDatabaseIfNeeded];
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docsPath = [paths objectAtIndex:0];
     NSString *path = [docsPath stringByAppendingPathComponent:@"database.sqlite"];
+    
     database = [FMDatabase databaseWithPath:path];
     
     return [database open];
@@ -67,6 +75,30 @@
 
     [INITdatabase close];
     
+}
+
+// Function to Create a writable copy of the bundled default database in the application Documents directory.
+- (void)createCopyOfDatabaseIfNeeded {
+    // First, test for existence.
+    BOOL success;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    // Database filename can have extension db/sqlite.
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *appDBPath = [documentsDirectory stringByAppendingPathComponent:@"database.sqlite"];
+    
+    success = [fileManager fileExistsAtPath:appDBPath];
+    if (success){
+        return;
+    }
+    // The writable database does not exist, so copy the default to the appropriate location.
+    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"database.sqlite"];
+    success = [fileManager copyItemAtPath:defaultDBPath toPath:appDBPath error:&error];
+    if (!success) {
+        NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
+    }else
+        [self buildInitialDatabase];
 }
 
 -(void)setSelectionIndex:(NSString *)object
