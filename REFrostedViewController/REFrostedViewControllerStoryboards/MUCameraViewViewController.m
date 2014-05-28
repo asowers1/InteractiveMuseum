@@ -55,6 +55,13 @@
         
         [myAlertView show];
         
+    } else {
+        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker.delegate = self;
+        picker.allowsEditing = YES;
+        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+        
+        [self presentViewController:picker animated:YES completion:NULL];
     }
     
 }
@@ -62,6 +69,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
+    
     
 }
 
@@ -88,6 +96,14 @@
     
 }
 
+- (IBAction)loadMemoir:(UIBarButtonItem *)sender
+{
+    DEMONavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"contentController"];
+    IMDetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"detailController"];
+    navigationController.viewControllers = @[detailViewController];
+    self.frostedViewController.contentViewController = navigationController;
+    [self.navigationController popViewControllerAnimated:YES];
+}
 #pragma mark - Image Picker Controller delegate methods
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {

@@ -151,40 +151,22 @@
                                 <rect key="frame" x="-4" y="386" width="328" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6v-Yd-JbM">
-                                        <rect key="frame" x="188" y="101" width="48" height="44"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwB-t9-qQf">
+                                        <rect key="frame" x="83" y="0.0" width="162" height="154"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                                        <state key="normal" title="Select">
-                                            <color key="titleColor" red="0.46274513006210327" green="0.7568628191947937" blue="0.72156864404678345" alpha="1" colorSpace="deviceRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="selectPhoto:" destination="fOn-L2-JSf" eventType="touchUpInside" id="OEL-om-VRD"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HwB-t9-qQf">
-                                        <rect key="frame" x="102" y="101" width="44" height="44"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
-                                        <state key="normal" title="Take">
+                                        <state key="normal" image="refresh">
                                             <color key="titleColor" red="0.53333336114883423" green="0.79215693473815918" blue="0.75294125080108643" alpha="1" colorSpace="deviceRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="takePhoto:" destination="fOn-L2-JSf" eventType="touchUpInside" id="va0-Vr-xdb"/>
+                                            <action selector="takePhoto:" destination="fOn-L2-JSf" eventType="touchUpInside" id="ozt-DV-hiy"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B13-b5-W2n">
-                                        <rect key="frame" x="154" y="101" width="21" height="44"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Retake Photo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HIR-oP-Ern">
+                                        <rect key="frame" x="112" y="141" width="105" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RG5-E1-kbW">
-                                        <rect key="frame" x="79" y="131" width="171" height="51"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -204,12 +186,17 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oof-hx-Mze"/>
+                    <navigationItem key="navigationItem" id="As1-ac-32I">
+                        <barButtonItem key="rightBarButtonItem" title="OK" id="VlA-Nk-UFm">
+                            <color key="tintColor" red="0.53333336109999996" green="0.79215693470000004" blue="0.75294125079999996" alpha="1" colorSpace="deviceRGB"/>
+                            <connections>
+                                <action selector="loadMemoir:" destination="fOn-L2-JSf" id="8kI-5c-SfU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="imageView" destination="z9K-aw-wwi" id="p1O-fo-VG3"/>
-                        <outlet property="infoLabel" destination="B13-b5-W2n" id="S5G-Qm-H43"/>
-                        <outlet property="infoLabel1" destination="RG5-E1-kbW" id="15S-OP-bPp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oLQ-t9-tcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -344,14 +331,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Gg-wN-ZXS">
-                                <rect key="frame" x="238" y="304" width="30" height="32"/>
+                                <rect key="frame" x="244" y="303" width="30" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="memiorObject">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VvT-tY-CBs">
-                                <rect key="frame" x="276" y="302" width="24" height="32"/>
+                                <rect key="frame" x="282" y="301" width="24" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="sharewTransparent">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -361,7 +348,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJd-D7-4a3">
-                                <rect key="frame" x="198" y="304" width="32" height="32"/>
+                                <rect key="frame" x="204" y="303" width="32" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="mic">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -428,6 +415,7 @@
         <image name="memiorGrid" width="26" height="26"/>
         <image name="memiorObject" width="256" height="256"/>
         <image name="mic" width="171" height="178"/>
+        <image name="refresh" width="256" height="256"/>
         <image name="sharewTransparent" width="38" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

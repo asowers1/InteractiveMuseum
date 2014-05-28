@@ -324,6 +324,7 @@
     [data setSelectionIndex:string];
     [data closeDatabase];
 
+    
     self.frostedViewController.contentViewController = navigationController;
     [self.frostedViewController hideMenuViewController];
 
