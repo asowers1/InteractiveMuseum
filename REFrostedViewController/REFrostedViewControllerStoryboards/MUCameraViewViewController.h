@@ -19,6 +19,7 @@
 
 - (IBAction)takePhoto:  (UIButton *)sender;
 - (IBAction)selectPhoto:(UIButton *)sender;
+- (IBAction)sendToServer:(UIButton *)sender;
 - (IBAction)loadMemoir:(UIBarButtonItem *)sender;
 @property (strong, nonatomic) IBOutlet UILabel *infoLabel;
 @property (strong, nonatomic) IBOutlet UILabel *infoLabel1;

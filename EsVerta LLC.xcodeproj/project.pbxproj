@@ -371,6 +371,10 @@
 				49DCB641192BD9C500822160 /* FMResultSet.m */,
 				49DCB618192B9B1000822160 /* IMMeniorManager.h */,
 				49DCB619192B9B1000822160 /* IMMeniorManager.m */,
+				5D252C5018E20BF400195CB4 /* IMDetailViewController.h */,
+				5D252C5118E20BF400195CB4 /* IMDetailViewController.m */,
+				5D480C5818EB6BA000D5A7D8 /* IMAudioPlayerView.h */,
+				5D480C5918EB6BA000D5A7D8 /* IMAudioPlayerView.m */,
 				49FED2A918D79129004BE4E0 /* Main_iPhone.storyboard */,
 				49FED2AC18D79129004BE4E0 /* Main_iPad.storyboard */,
 				492AB6E418D7B8ED001B9559 /* Images.xcassets */,
@@ -379,10 +383,6 @@
 				492AB6AC18D79FFF001B9559 /* REFrostedViewController */,
 				492AB6BF18D7A0F8001B9559 /* REFrostedViewControllerStoryboards */,
 				49FED29E18D79129004BE4E0 /* Supporting Files */,
-				5D252C5018E20BF400195CB4 /* IMDetailViewController.h */,
-				5D252C5118E20BF400195CB4 /* IMDetailViewController.m */,
-				5D480C5818EB6BA000D5A7D8 /* IMAudioPlayerView.h */,
-				5D480C5918EB6BA000D5A7D8 /* IMAudioPlayerView.m */,
 				5D480C4E18EB2AF600D5A7D8 /* Model */,
 			);
 			path = InteractiveMuseum;

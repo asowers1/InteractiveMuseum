@@ -73,6 +73,11 @@
     
 }
 
+- (IBAction)sendToServer:(UIButton *)sender
+{
+    NSLog(@"Sent? %i",[self uploadImage:[[NSData alloc] initWithContentsOfFile:@"file1.jpg"] filename:@"file1.jpg"]);
+}
+
 - (IBAction)takePhoto:(UIButton *)sender {
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
