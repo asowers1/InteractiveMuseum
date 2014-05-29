@@ -27,6 +27,7 @@
     */
     
     [self createCopyOfDatabaseIfNeeded];
+    
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docsPath = [paths objectAtIndex:0];
     NSString *path = [docsPath stringByAppendingPathComponent:@"database.sqlite"];
@@ -77,12 +78,14 @@
     
 }
 
+#pragma mark - Defined Functions
+
 // Function to Create a writable copy of the bundled default database in the application Documents directory.
 - (void)createCopyOfDatabaseIfNeeded {
     // First, test for existence.
     BOOL success;
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSError *error;
+    //NSError *error;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     // Database filename can have extension db/sqlite.
     NSString *documentsDirectory = [paths objectAtIndex:0];
@@ -93,14 +96,16 @@
         return;
     }
     // The writable database does not exist, so copy the default to the appropriate location.
+    [self buildInitialDatabase];
+    /*
     NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"database.sqlite"];
     success = [fileManager copyItemAtPath:defaultDBPath toPath:appDBPath error:&error];
     if (!success) {
         NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
-    }else
-        [self buildInitialDatabase];
+    }
+     */
+    
 }
-
 -(void)setSelectionIndex:(NSString *)object
 {
     

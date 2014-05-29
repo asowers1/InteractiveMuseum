@@ -34,7 +34,6 @@
 		49DCB5D119245B5800822160 /* UIColor+iOS7.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DCB5CF19245B5800822160 /* UIColor+iOS7.m */; };
 		49DCB61A192B9B1000822160 /* IMMeniorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DCB619192B9B1000822160 /* IMMeniorManager.m */; };
 		49DCB61C192B9CBC00822160 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DCB61B192B9CBC00822160 /* libsqlite3.0.dylib */; };
-		49DCB61E192B9CC200822160 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49DCB61D192B9CC200822160 /* libsqlite3.0.dylib */; };
 		49DCB642192BD9C500822160 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DCB63D192BD9C500822160 /* FMDatabase.m */; };
 		49DCB643192BD9C500822160 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DCB63F192BD9C500822160 /* FMDatabaseAdditions.m */; };
 		49DCB644192BD9C500822160 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DCB641192BD9C500822160 /* FMResultSet.m */; };
@@ -148,7 +147,6 @@
 		49DCB618192B9B1000822160 /* IMMeniorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMMeniorManager.h; path = ../REFrostedViewController/REFrostedViewControllerStoryboards/IMMeniorManager.h; sourceTree = "<group>"; };
 		49DCB619192B9B1000822160 /* IMMeniorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMMeniorManager.m; path = ../REFrostedViewController/REFrostedViewControllerStoryboards/IMMeniorManager.m; sourceTree = "<group>"; };
 		49DCB61B192B9CBC00822160 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
-		49DCB61D192B9CC200822160 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libsqlite3.0.dylib; sourceTree = "<group>"; };
 		49DCB63C192BD9C500822160 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
 		49DCB63D192BD9C500822160 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		49DCB63E192BD9C500822160 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -215,7 +213,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49DCB61E192B9CC200822160 /* libsqlite3.0.dylib in Frameworks */,
 				49DCB61C192B9CBC00822160 /* libsqlite3.0.dylib in Frameworks */,
 				5D480C5418EB671700D5A7D8 /* AVFoundation.framework in Frameworks */,
 				5D480C4818EB1B8D00D5A7D8 /* libxml2.dylib in Frameworks */,
@@ -345,7 +342,6 @@
 		49FED29D18D79129004BE4E0 /* InteractiveMuseum */ = {
 			isa = PBXGroup;
 			children = (
-				49DCB61D192B9CC200822160 /* libsqlite3.0.dylib */,
 				49DCB5C919245AD200822160 /* SenTestingKit.framework */,
 				49DCB5CB19245B5800822160 /* FFCircularProgressView */,
 				5D480C3D18EB1ACE00D5A7D8 /* hpple */,

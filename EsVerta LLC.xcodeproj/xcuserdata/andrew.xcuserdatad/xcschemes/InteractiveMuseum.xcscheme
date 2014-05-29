@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "49FED29318D79129004BE4E0"
-               BuildableName = "InteractiveMuseum.app"
+               BuildableName = "EsVerta LLC.app"
                BlueprintName = "EsVerta LLC"
                ReferencedContainer = "container:EsVerta LLC.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "49FED2B718D79129004BE4E0"
-               BuildableName = "InteractiveMuseumTests.xctest"
+               BuildableName = "EsVerta LLCTests.xctest"
                BlueprintName = "EsVerta LLCTests"
                ReferencedContainer = "container:EsVerta LLC.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "49FED29318D79129004BE4E0"
-            BuildableName = "InteractiveMuseum.app"
+            BuildableName = "EsVerta LLC.app"
             BlueprintName = "EsVerta LLC"
             ReferencedContainer = "container:EsVerta LLC.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "49FED29318D79129004BE4E0"
-            BuildableName = "InteractiveMuseum.app"
+            BuildableName = "EsVerta LLC.app"
             BlueprintName = "EsVerta LLC"
             ReferencedContainer = "container:EsVerta LLC.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "49FED29318D79129004BE4E0"
-            BuildableName = "InteractiveMuseum.app"
+            BuildableName = "EsVerta LLC.app"
             BlueprintName = "EsVerta LLC"
             ReferencedContainer = "container:EsVerta LLC.xcodeproj">
          </BuildableReference>
