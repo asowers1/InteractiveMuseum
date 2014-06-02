@@ -38,8 +38,14 @@
     self.navigationItem.titleView=tlabel;
     //self.title = @"Interactive Museum";
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(43, 113, 234, 341)];
-    imageView.image = [UIImage imageNamed:@"JohnsonFrontPage"];
+    //UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(43, 113, 234, 341)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 64, 320, 536)];
+    UIImage *originalImage = [UIImage imageNamed:@"JohnsonFrontPage"];
+    UIImage *scaledImage =
+    [UIImage imageWithCGImage:[originalImage CGImage]
+                        scale:(originalImage.scale * 1.0)
+                  orientation:(originalImage.imageOrientation)];
+    imageView.image = scaledImage;
     [self.view addSubview:imageView];
 }
 
