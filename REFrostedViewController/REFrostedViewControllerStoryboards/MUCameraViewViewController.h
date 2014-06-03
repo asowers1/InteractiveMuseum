@@ -13,7 +13,9 @@
 #import "UIViewController+REFrostedViewController.h"
 #import "DEMONavigationController.h"
 #import "IMDetailViewController.h"
-@interface MUCameraViewViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@interface MUCameraViewViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
+    UIImagePickerController *picker;
+}
 
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 

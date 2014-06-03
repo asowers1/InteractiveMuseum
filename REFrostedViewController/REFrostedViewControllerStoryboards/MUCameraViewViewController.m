@@ -7,7 +7,7 @@
 //
 
 #import "MUCameraViewViewController.h"
-
+#import "IMMeniorManager.h"
 @interface MUCameraViewViewController ()
 
 @end
@@ -24,10 +24,16 @@
     return self;
 }
 
+-(void) viewWillAppear:(BOOL)animated
+{
+}
+
+
 
 - (void)viewDidLoad {
     
     [super viewDidLoad];
+
 	// Do any additional setup after loading the view, typically from a nib.
     infoLabel.text = @"Or";
     infoLabel.textColor = [UIColor grayColor];
@@ -44,7 +50,6 @@
     infoLabel1.adjustsFontSizeToFitWidth=YES;
     
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:116.0/255.0 green:191.0/255.0 blue:185.0/255.0 alpha:1.0];
-    
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
         UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
@@ -56,19 +61,27 @@
         [myAlertView show];
         
     } else {
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+        picker = [[UIImagePickerController alloc] init];
         picker.delegate = self;
         picker.allowsEditing = YES;
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
         
         [self presentViewController:picker animated:YES completion:NULL];
     }
+
     
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     
     [super viewDidAppear:animated];
+    
+    IMMeniorManager *data = [[IMMeniorManager alloc] init];
+    [data openDatabase];
+    [data setPhotoReturn:@"yes"];
+    [data setSelectionIndex:@"Object1"];
+    [data closeDatabase];
+
     
     
 }
@@ -80,7 +93,7 @@
 
 - (IBAction)takePhoto:(UIButton *)sender {
     
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypeCamera;
@@ -91,7 +104,7 @@
 
 - (IBAction)selectPhoto:(UIButton *)sender {
     
-    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker = [[UIImagePickerController alloc] init];
     picker.delegate = self;
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
@@ -111,17 +124,17 @@
 }
 #pragma mark - Image Picker Controller delegate methods
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+- (void)imagePickerController:(UIImagePickerController *)pickerIn didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     uncompressedImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = uncompressedImage;
-    [picker dismissViewControllerAnimated:YES completion:NULL];
+    [pickerIn dismissViewControllerAnimated:YES completion:NULL];
     
 }
 
-- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)pickerIn {
     
-    [picker dismissViewControllerAnimated:YES completion:NULL];
+    [pickerIn dismissViewControllerAnimated:YES completion:NULL];
     
 }
 

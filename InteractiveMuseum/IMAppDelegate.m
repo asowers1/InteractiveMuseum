@@ -18,6 +18,7 @@
     //[data buildInitialDatabase];
     [data openDatabase];
     NSLog(@"DATA:%@:",[data getSelectionIndex]);
+    [data setPhotoReturn:@"no"];
     [data closeDatabase];
     
     return YES;

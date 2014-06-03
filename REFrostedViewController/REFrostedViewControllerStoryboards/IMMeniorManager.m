@@ -55,11 +55,13 @@
     
     [INITdatabase executeUpdate:@"create table object(name text primary key, waterfallIndex int)"];
     [INITdatabase executeUpdate:@"create table current(name text primary key)"];
+    [INITdatabase executeUpdate:@"create table photoReturn(state text primary key)"];
 
     [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex) values(?,?)",@"Object1",[NSNumber numberWithInt:0],nil];
     [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex) values(?,?)",@"Object2",[NSNumber numberWithInt:1],nil];
     [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex) values(?,?)",@"Object3",[NSNumber numberWithInt:2],nil];
     
+    [INITdatabase executeUpdate:@"insert into photoReturn(state) values(?)",@"no",nil];
     [INITdatabase executeUpdate:@"insert into current(name) values(?)",@"Object1",nil];
     
     
@@ -112,11 +114,29 @@
     [database executeUpdate:@"UPDATE current SET name = ? WHERE rowid = ?", object, [NSNumber numberWithInt:1],nil];
 }
 
+-(void)setPhotoReturn:(NSString *)object
+{
+    [database executeUpdate:@"UPDATE photoReturn SET state = ? WHERE rowid = ?", object, [NSNumber numberWithInt:1],nil];
+}
+
 -(NSString *)getSelectionIndex
 {
     FMResultSet *result = [database executeQuery:@"SELECT * FROM current"];
     while([result next]){
         NSString * string = [result stringForColumn:@"name"];
+        //NSString * rowid = [result stringForColumn:@"rowid"];
+        //NSLog(@"OUTDATA:%@:%@:",string,rowid);
+        // to do: assert for invalid selection
+        return string;
+    }
+    return @"error";
+}
+
+-(NSString *)getPhotoReturn
+{
+    FMResultSet *result = [database executeQuery:@"SELECT * FROM photoReturn"];
+    while([result next]){
+        NSString * string = [result stringForColumn:@"state"];
         //NSString * rowid = [result stringForColumn:@"rowid"];
         //NSLog(@"OUTDATA:%@:%@:",string,rowid);
         // to do: assert for invalid selection

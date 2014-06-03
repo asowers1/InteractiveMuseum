@@ -16,7 +16,9 @@
 -(void)buildInitialDatabase;
 -(NSString *)getObjectFromIndex:(int)index;
 -(void)setSelectionIndex:(NSString *)object;
+-(void)setPhotoReturn:(NSString *)object;
 -(NSString *)getSelectionIndex;
+-(NSString *)getPhotoReturn;
 -(BOOL)openDatabase;
 -(BOOL)closeDatabase;
 -(int)getObjectCount;

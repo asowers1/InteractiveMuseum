@@ -49,5 +49,22 @@
     [self.view addSubview:imageView];
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    IMMeniorManager *data = [[IMMeniorManager alloc] init];
+    [data openDatabase];
+    if ([[data getPhotoReturn] isEqualToString:@"yes"]) {
+        NSLog(@"true");
+        DEMONavigationController *navigationController = [self.storyboard instantiateViewControllerWithIdentifier:@"contentController"];
+        IMDetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"detailController"];
+        navigationController.viewControllers = @[detailViewController];
+        [data setSelectionIndex:@"Object1"];
+        self.frostedViewController.contentViewController = navigationController;
+        [self.frostedViewController hideMenuViewController];
+    }else
+        NSLog(@"false");
+    [data closeDatabase];
+}
+
 
 @end
