@@ -77,23 +77,26 @@
 - (void)tapOnce:(UIGestureRecognizer *)gesture
 {
     
-    [UIView animateWithDuration:0.5
-                     animations:^{
-                         self.imageView.frame = prevFrame;
-                     }];
     NSLog(@"tapOnce");
     
 }
 - (void)tapTwice:(UIGestureRecognizer *)gesture
 {
 
-    [self.view bringSubviewToFront:self.imageView];
-    [UIView animateWithDuration:0.5
+    if (CGRectEqualToRect(self.imageView.frame, prevFrame)) {
+    //[self.view bringSubviewToFront:self.imageView];
+        [UIView animateWithDuration:0.2
                      animations:^{
                          self.imageView.frame = newFrame;
                      }];
 
     NSLog(@"tapTwice");
+    }else if(CGRectEqualToRect(self.imageView.frame, newFrame)){
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             self.imageView.frame = prevFrame;
+                         }];
+    }
 
 }
 - (void)viewWillAppear:(BOOL)animated
