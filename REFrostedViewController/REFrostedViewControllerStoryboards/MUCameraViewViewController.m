@@ -33,22 +33,6 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-
-	// Do any additional setup after loading the view, typically from a nib.
-    infoLabel.text = @"Or";
-    infoLabel.textColor = [UIColor grayColor];
-    infoLabel.textAlignment = NSTextAlignmentCenter;
-    infoLabel.backgroundColor = [UIColor clearColor];
-    infoLabel.font = [UIFont fontWithName:@"Baskerville-Italic" size:24];
-    infoLabel.adjustsFontSizeToFitWidth=YES;
-    
-    infoLabel1.text = @"A Photo";
-    infoLabel1.textColor = [UIColor grayColor];
-    infoLabel1.textAlignment = NSTextAlignmentCenter;
-    infoLabel1.backgroundColor = [UIColor clearColor];
-    infoLabel1.font = [UIFont fontWithName:@"Baskerville-Italic" size:36];
-    infoLabel1.adjustsFontSizeToFitWidth=YES;
-    
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:116.0/255.0 green:191.0/255.0 blue:185.0/255.0 alpha:1.0];
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
@@ -66,24 +50,20 @@
         picker.allowsEditing = YES;
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;
         
-        [self presentViewController:picker animated:YES completion:NULL];
+        [self presentViewController:picker animated:NO completion:nil];
     }
 
     
 }
 
-- (void)viewDidAppear:(BOOL)animated {
+- (void)viewWillDisappear:(BOOL)animated {
     
     [super viewDidAppear:animated];
-    
     IMMeniorManager *data = [[IMMeniorManager alloc] init];
     [data openDatabase];
     [data setPhotoReturn:@"yes"];
     [data setSelectionIndex:@"Object1"];
     [data closeDatabase];
-
-    
-    
 }
 
 - (IBAction)sendToServer:(UIButton *)sender
