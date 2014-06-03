@@ -47,8 +47,55 @@
     tlabel.font = [UIFont fontWithName:@"Baskerville-Italic" size:28];
     tlabel.adjustsFontSizeToFitWidth=YES;
     self.navigationItem.titleView=tlabel;
+    
+    // target - what object is going to handle
+    // the gesture when it gets recognised
+    // the argument for tap: is the gesture that caused this message to be sent
+    UITapGestureRecognizer *tapOnce =
+    [[UITapGestureRecognizer alloc] initWithTarget:self
+                                            action:@selector(tapOnce:)];
+    UITapGestureRecognizer *tapTwice =
+    [[UITapGestureRecognizer alloc] initWithTarget:self
+                                            action:@selector(tapTwice:)];
+    
+    tapOnce.numberOfTapsRequired = 1;
+    tapTwice.numberOfTapsRequired = 2;
+    
+    //stops tapOnce from overriding tapTwice
+    [tapOnce requireGestureRecognizerToFail:tapTwice];
+    
+    // then need to add the gesture recogniser to a view
+    // - this will be the view that recognises the gesture
+    [self.imageView addGestureRecognizer:tapOnce];
+    [self.imageView addGestureRecognizer:tapTwice];
+    prevFrame = CGRectMake(20, 139, 170, 212);
+    newFrame = CGRectMake(0, 64, 320, 536);
+    NSLog(@"load detail");
+    
 }
 
+- (void)tapOnce:(UIGestureRecognizer *)gesture
+{
+    
+    [UIView animateWithDuration:0.5
+                     animations:^{
+                         self.imageView.frame = prevFrame;
+                     }];
+    NSLog(@"tapOnce");
+    
+}
+- (void)tapTwice:(UIGestureRecognizer *)gesture
+{
+
+    [self.view bringSubviewToFront:self.imageView];
+    [UIView animateWithDuration:0.5
+                     animations:^{
+                         self.imageView.frame = newFrame;
+                     }];
+
+    NSLog(@"tapTwice");
+
+}
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
@@ -59,6 +106,13 @@
     self.artPiece = [[IMArtPiece alloc] init];
     [self loadArtPeiceFromSQLite];
     [self setUpView];
+    [self.view bringSubviewToFront:self.imageView];
+    
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    
 }
 
 -(void)loadArtPeiceFromSQLite
