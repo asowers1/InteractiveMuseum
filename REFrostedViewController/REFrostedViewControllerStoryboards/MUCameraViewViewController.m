@@ -52,8 +52,6 @@
         
         [self presentViewController:picker animated:NO completion:nil];
     }
-
-    
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -105,10 +103,12 @@
 #pragma mark - Image Picker Controller delegate methods
 
 - (void)imagePickerController:(UIImagePickerController *)pickerIn didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
+    NSLog(@"FIRES");
     uncompressedImage = info[UIImagePickerControllerEditedImage];
     self.imageView.image = uncompressedImage;
-    [pickerIn dismissViewControllerAnimated:YES completion:NULL];
+    [pickerIn dismissViewControllerAnimated:NO completion:NULL];
+    
+    [self.navigationController popViewControllerAnimated:NO];
     
 }
 
