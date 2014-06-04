@@ -30,6 +30,7 @@
 		49360B6418DFA67A00F506B1 /* AVCamPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49360B6318DFA67A00F506B1 /* AVCamPreviewView.m */; };
 		49360B6718DFA82A00F506B1 /* MUCameraViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49360B6618DFA82A00F506B1 /* MUCameraViewViewController.m */; };
 		495A64D1191E8B50001E8EBA /* IMAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 495A64D0191E8B50001E8EBA /* IMAudioViewController.m */; };
+		49DB9938193FBD9200259010 /* IMDialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DB9937193FBD9200259010 /* IMDialViewController.m */; };
 		49DCB5D019245B5800822160 /* FFCircularProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DCB5CD19245B5800822160 /* FFCircularProgressView.m */; };
 		49DCB5D119245B5800822160 /* UIColor+iOS7.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DCB5CF19245B5800822160 /* UIColor+iOS7.m */; };
 		49DCB61A192B9B1000822160 /* IMMeniorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DCB619192B9B1000822160 /* IMMeniorManager.m */; };
@@ -139,6 +140,8 @@
 		49360B6618DFA82A00F506B1 /* MUCameraViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MUCameraViewViewController.m; path = ../REFrostedViewController/REFrostedViewControllerStoryboards/MUCameraViewViewController.m; sourceTree = "<group>"; };
 		495A64CF191E8B50001E8EBA /* IMAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMAudioViewController.h; path = ../IMAudioViewController.h; sourceTree = "<group>"; };
 		495A64D0191E8B50001E8EBA /* IMAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMAudioViewController.m; path = ../IMAudioViewController.m; sourceTree = "<group>"; };
+		49DB9936193FBD9200259010 /* IMDialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMDialViewController.h; path = ../IMDialViewController.h; sourceTree = "<group>"; };
+		49DB9937193FBD9200259010 /* IMDialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IMDialViewController.m; path = ../IMDialViewController.m; sourceTree = "<group>"; };
 		49DCB5C919245AD200822160 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SenTestingKit.framework; sourceTree = "<group>"; };
 		49DCB5CC19245B5800822160 /* FFCircularProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFCircularProgressView.h; sourceTree = "<group>"; };
 		49DCB5CD19245B5800822160 /* FFCircularProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFCircularProgressView.m; sourceTree = "<group>"; };
@@ -375,6 +378,8 @@
 				5D252C5118E20BF400195CB4 /* IMDetailViewController.m */,
 				5D480C5818EB6BA000D5A7D8 /* IMAudioPlayerView.h */,
 				5D480C5918EB6BA000D5A7D8 /* IMAudioPlayerView.m */,
+				49DB9936193FBD9200259010 /* IMDialViewController.h */,
+				49DB9937193FBD9200259010 /* IMDialViewController.m */,
 				49FED2A918D79129004BE4E0 /* Main_iPhone.storyboard */,
 				49FED2AC18D79129004BE4E0 /* Main_iPad.storyboard */,
 				492AB6E418D7B8ED001B9559 /* Images.xcassets */,
@@ -608,6 +613,7 @@
 				492AB6BC18D79FFF001B9559 /* UIImage+REFrostedViewController.m in Sources */,
 				49FED2A418D79129004BE4E0 /* main.m in Sources */,
 				492AB72418D7CBD9001B9559 /* CHTCollectionViewWaterfallHeader.m in Sources */,
+				49DB9938193FBD9200259010 /* IMDialViewController.m in Sources */,
 				5D480C4518EB1B0300D5A7D8 /* TFHppleElement.m in Sources */,
 				5D480C4418EB1B0300D5A7D8 /* TFHpple.m in Sources */,
 				492AB72518D7CBD9001B9559 /* CHTCollectionViewWaterfallFooter.m in Sources */,
