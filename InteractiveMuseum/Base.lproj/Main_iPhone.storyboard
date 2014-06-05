@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="1FQ-JA-CWV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="14A238x" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="1FQ-JA-CWV">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
         <!--Root View Controller-->
@@ -54,10 +54,10 @@
                                 <action selector="showMenu" destination="VcY-P9-Qty" id="Idu-8D-Wwi"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" tag="1" image="currentCam" id="FTU-2j-tXw">
+                        <barButtonItem key="rightBarButtonItem" tag="1" image="newMoon" id="FTU-2j-tXw">
                             <color key="tintColor" red="0.46274513006210327" green="0.7568628191947937" blue="0.72156864404678345" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
-                                <segue destination="w9b-gc-jUg" kind="push" id="mRg-pr-baM"/>
+                                <segue destination="MCs-RQ-qWn" kind="push" id="mZY-gz-g8K"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -70,33 +70,41 @@
             </objects>
             <point key="canvasLocation" x="1447" y="292"/>
         </scene>
-        <!--View Controller - Input Catalog Code:-->
-        <scene sceneID="upv-Xj-LSV">
+        <!--Dial View Controller-->
+        <scene sceneID="Lgg-PV-JWT">
             <objects>
-                <viewController id="jXs-B6-Pat" sceneMemberID="viewController">
+                <viewController id="MCs-RQ-qWn" customClass="IMDialViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1GZ-eF-KCk"/>
-                        <viewControllerLayoutGuide type="bottom" id="Xb3-Tq-TBs"/>
+                        <viewControllerLayoutGuide type="top" id="VEA-oz-reE"/>
+                        <viewControllerLayoutGuide type="bottom" id="cYh-Z3-nnl"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Rb5-Q6-U8n">
+                    <view key="view" contentMode="scaleToFill" id="9N7-u9-F7P">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="0000" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="13t-Uw-ecx">
-                                <rect key="frame" x="67" y="39" width="186" height="174"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OYr-GV-ZBJ">
+                                <rect key="frame" x="0.0" y="66" width="320" height="217"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="68"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="phonePad" keyboardAppearance="light" returnKeyType="go"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="42"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="go" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Input Catalog Code:" id="Crh-75-Non"/>
+                    <navigationItem key="navigationItem" id="DjK-x3-e6w">
+                        <barButtonItem key="rightBarButtonItem" title="GO" id="xfO-cc-4yt">
+                            <connections>
+                                <action selector="GO:" destination="MCs-RQ-qWn" id="aSW-6K-uak"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dialText" destination="OYr-GV-ZBJ" id="2t2-tC-d3x"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZDD-zk-37s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IAY-NX-Gdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1993" y="-1115"/>
+            <point key="canvasLocation" x="1977" y="-425"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="huU-cH-KBX">
@@ -107,7 +115,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="L7s-O5-Bb1">
+                            <tableViewCell contentMode="scaleToFill" ambiguous="YES" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="L7s-O5-Bb1">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L7s-O5-Bb1" id="HjY-en-0WQ">
@@ -243,10 +251,10 @@
                                 <action selector="showMenu:" destination="F3v-kU-MJz" id="Pkg-lD-rPE"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" image="currentCam" id="d9a-jW-FLP">
+                        <barButtonItem key="rightBarButtonItem" image="newMoon" id="d9a-jW-FLP">
                             <color key="tintColor" red="0.53333336109999996" green="0.79215693470000004" blue="0.75294125079999996" alpha="1" colorSpace="deviceRGB"/>
                             <connections>
-                                <segue destination="w9b-gc-jUg" kind="push" id="v1p-io-m0I"/>
+                                <segue destination="MCs-RQ-qWn" kind="push" id="gwR-4I-FOw"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -265,25 +273,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wyD-vj-uo7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1452" y="-425"/>
-        </scene>
-        <!--Camera View View Controller-->
-        <scene sceneID="dxw-Kf-iBa">
-            <objects>
-                <viewController id="w9b-gc-jUg" customClass="MUCameraViewViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oIx-Xx-YMQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="cYR-D0-fKc"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="NSD-bu-7RM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="BWQ-f8-J6B"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3hi-aM-kbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1993" y="-425"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eMw-oW-KIv">
@@ -306,9 +295,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="currentCam" width="32" height="32"/>
         <image name="memiorGrid" width="26" height="26"/>
         <image name="memiorObject" width="256" height="256"/>
+        <image name="newMoon" width="40" height="40"/>
         <image name="shareTranTwo" width="48" height="60"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -317,6 +306,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="mRg-pr-baM"/>
+        <segue reference="gwR-4I-FOw"/>
     </inferredMetricsTieBreakers>
 </document>

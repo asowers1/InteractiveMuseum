@@ -115,6 +115,7 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)pickerIn {
     
     [pickerIn dismissViewControllerAnimated:YES completion:NULL];
+    [self.navigationController popViewControllerAnimated:NO];
     
 }
 

@@ -178,6 +178,17 @@
     
 }
 
+// check if object exists in database
+-(BOOL)checkForObject:(NSString *)object
+{
+    NSString *objectFixed = [NSString stringWithFormat:@"%ld",([object integerValue]-1)];
+    FMResultSet *result = [database executeQuery:[NSString stringWithFormat:@"select name from object where waterfallIndex = %@",objectFixed]];
+    if ([result next]) {
+        return true;
+    }else
+    return false;
+}
+
 // get name of object from index
 -(NSString *)getObjectFromIndex:(int)index
 { 

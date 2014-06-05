@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IMDialViewController : UIViewController
+@interface IMDialViewController : UIViewController <UITextViewDelegate,UIAlertViewDelegate>
 
 @end

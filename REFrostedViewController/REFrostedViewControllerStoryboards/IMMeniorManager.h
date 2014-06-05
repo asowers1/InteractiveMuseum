@@ -21,6 +21,7 @@
 -(NSString *)getPhotoReturn;
 -(BOOL)openDatabase;
 -(BOOL)closeDatabase;
+-(BOOL)checkForObject:(NSString *)object;
 -(int)getObjectCount;
 @property(strong, nonatomic) NSString * query;
 
