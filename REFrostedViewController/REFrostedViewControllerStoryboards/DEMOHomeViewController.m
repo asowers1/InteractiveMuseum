@@ -59,6 +59,7 @@
         IMDetailViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"detailController"];
         navigationController.viewControllers = @[detailViewController];
         //[data setSelectionIndex:@"Object1"];
+        
         self.frostedViewController.contentViewController = navigationController;
         [self.frostedViewController hideMenuViewController];
     }else
