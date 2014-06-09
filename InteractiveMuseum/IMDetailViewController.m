@@ -51,49 +51,55 @@
     // target - what object is going to handle
     // the gesture when it gets recognised
     // the argument for tap: is the gesture that caused this message to be sent
-    UITapGestureRecognizer *tapOnce =
-    [[UITapGestureRecognizer alloc] initWithTarget:self
-                                            action:@selector(tapOnce:)];
+//    UITapGestureRecognizer *tapOnce =
+//    [[UITapGestureRecognizer alloc] initWithTarget:self
+//                                            action:@selector(tapOnce:)];
     UITapGestureRecognizer *tapTwice =
     [[UITapGestureRecognizer alloc] initWithTarget:self
                                             action:@selector(tapTwice:)];
     
-    tapOnce.numberOfTapsRequired = 1;
+    //tapOnce.numberOfTapsRequired = 1;
     tapTwice.numberOfTapsRequired = 2;
     
     //stops tapOnce from overriding tapTwice
-    [tapOnce requireGestureRecognizerToFail:tapTwice];
+    //[tapOnce requireGestureRecognizerToFail:tapTwice];
     
     // then need to add the gesture recogniser to a view
     // - this will be the view that recognises the gesture
-    [self.imageView addGestureRecognizer:tapOnce];
+    //[self.imageView addGestureRecognizer:tapOnce];
     [self.imageView addGestureRecognizer:tapTwice];
+    
+    // frames only applicable for iPhone 5/5c/5s
     prevFrame = CGRectMake(20, 139, 170, 212);
     newFrame = CGRectMake(0, 64, 320, 536);
     NSLog(@"load detail");
+    [self.view bringSubviewToFront:self.imageView];
+    imageExploded = NO;
     
 }
 
-- (void)tapOnce:(UIGestureRecognizer *)gesture
-{
-    
-    NSLog(@"tapOnce");
-    
-}
+//- (void)tapOnce:(UIGestureRecognizer *)gesture
+//{
+//    
+//    
+//}
+
 - (void)tapTwice:(UIGestureRecognizer *)gesture
 {
 
-    if (CGRectEqualToRect(self.imageView.frame, prevFrame)) {
+    if (!imageExploded) {
     //[self.view bringSubviewToFront:self.imageView];
         [UIView animateWithDuration:0.2
                      animations:^{
+                        self.imageView.backgroundColor =[UIColor blackColor];
                          self.imageView.frame = newFrame;
                      }];
-
-    NSLog(@"tapTwice");
-    }else if(CGRectEqualToRect(self.imageView.frame, newFrame)){
-        [UIView animateWithDuration:0.3
+        imageExploded = YES;
+    }else if(imageExploded){
+        imageExploded = NO;
+        [UIView animateWithDuration:0.2
                          animations:^{
+                             self.imageView.backgroundColor =[UIColor clearColor];
                              self.imageView.frame = prevFrame;
                          }];
     }
@@ -110,6 +116,7 @@
     [self loadArtPeiceFromSQLite];
     [self setUpView];
     [self.view bringSubviewToFront:self.imageView];
+    self.imageView.contentMode = UIViewContentModeScaleAspectFit;
     
 }
 
@@ -201,16 +208,25 @@
 
 - (void)setUpView
 {
+    NSString * discriptionText;
+    self.descriptionTextView.textAlignment = NSTextAlignmentJustified;
     self.imageView.image = [UIImage imageNamed:self.artPiece.imageName];
     self.titleLabel.text = self.artPiece.title;
     self.authorLabel.text = self.artPiece.author;
     self.collectionLabel.text = self.artPiece.collection;
     if([self.artPiece.descriptions count]>0)
-        self.descriptionTextView.text = [self.artPiece.descriptions objectAtIndex:0];
+        discriptionText = [self.artPiece.descriptions objectAtIndex:0];
+        self.descriptionTextView.text = discriptionText;
     
-    if([self.artPiece.wikipediaDescriptions count]>0)
-        self.wikipediaDescriptionTextView.text = [self.artPiece.wikipediaDescriptions objectAtIndex:0];
-    
+    if([self.artPiece.wikipediaDescriptions count]>0){
+        NSString *newText = [NSString stringWithFormat:@"%@\n\nWikipedia:\n\n%@",discriptionText,[self.artPiece.wikipediaDescriptions objectAtIndex:0]];
+        NSLog(@"%@",newText);
+        self.descriptionTextView.text = newText;
+        //[self.collectionLabel setText:[self.collectionLabel.text stringByAppendingString:wikiText]];
+        
+    }
+        //self.wikipediaDescriptionTextView.text = [self.artPiece.wikipediaDescriptions objectAtIndex:0];
+        
     IMAudioPlayerView *audioPlayerView = [[IMAudioPlayerView alloc] initWithFrame:CGRectMake(225, 139, 75, 55) audioFile:self.artPiece.audioFileName andImageFile:self.artPiece.imageName];
     [self.view addSubview:audioPlayerView];
 }

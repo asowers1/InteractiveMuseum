@@ -53,25 +53,36 @@
     
     [INITdatabase open];
     
-    [INITdatabase executeUpdate:@"create table object(name text primary key, waterfallIndex int)"];
+    [INITdatabase executeUpdate:@"create table object(name text primary key, waterfallIndex int, active int)"];
     [INITdatabase executeUpdate:@"create table current(name text primary key)"];
     [INITdatabase executeUpdate:@"create table photoReturn(state text primary key)"];
 
-    [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex) values(?,?)",@"Object1",[NSNumber numberWithInt:0],nil];
-    [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex) values(?,?)",@"Object2",[NSNumber numberWithInt:1],nil];
-    [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex) values(?,?)",@"Object3",[NSNumber numberWithInt:2],nil];
+    
+    [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex,active) values(?,?,?)",[NSString stringWithFormat:@"Object%d",1],[NSNumber numberWithInt:0],[NSNumber numberWithInt:1],nil];
+    [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex,active) values(?,?,?)",[NSString stringWithFormat:@"Object%d",2],[NSNumber numberWithInt:1],[NSNumber numberWithInt:1],nil];
+    [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex,active) values(?,?,?)",[NSString stringWithFormat:@"Object%d",3],[NSNumber numberWithInt:2],[NSNumber numberWithInt:1],nil];
+    [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex,active) values(?,?,?)",[NSString stringWithFormat:@"Object%d",4],[NSNumber numberWithInt:3],[NSNumber numberWithInt:0],nil];
+    [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex,active) values(?,?,?)",[NSString stringWithFormat:@"Object%d",5],[NSNumber numberWithInt:4],[NSNumber numberWithInt:0],nil];
+    [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex,active) values(?,?,?)",[NSString stringWithFormat:@"Object%d",6],[NSNumber numberWithInt:5],[NSNumber numberWithInt:0],nil];
+    [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex,active) values(?,?,?)",[NSString stringWithFormat:@"Object%d",7],[NSNumber numberWithInt:6],[NSNumber numberWithInt:0],nil];
+    
+/*
+    for (int i=3; i<9; i++)
+            [INITdatabase executeUpdate:@"insert into object(name, waterfallIndex,active) values(?,?,?)",[NSString stringWithFormat:@"Object%d",i+1],[NSNumber numberWithInt:i],[NSNumber numberWithInt:0],nil];
+*/
     
     [INITdatabase executeUpdate:@"insert into photoReturn(state) values(?)",@"no",nil];
     [INITdatabase executeUpdate:@"insert into current(name) values(?)",@"Object1",nil];
     
-    
+    [self addMemiorObject:3];
     int count=0;
     
     FMResultSet *results = [INITdatabase executeQuery:@"select * from object"];
     while([results next]) {
         NSString *name = [results stringForColumn:@"name"];
         NSInteger index  = [results intForColumn:@"waterfallIndex"];
-        NSLog(@"Initial data: %@ - %ld",name, (long)index);
+        NSInteger active = [results intForColumn:@"active"];
+        NSLog(@"Initial data: %@ - %ld - %ld",name, (long)index,(long)active);
         count++;
     }
     NSLog(@"COUNT: %d",count);
@@ -145,12 +156,13 @@
     return @"error";
 }
 
--(void)addMemiorObject
+-(void)addMemiorObject:(int)index
 {
     // count number of objects in database
     // insert new object based on count plus one
     // return
-    
+    NSLog(@"addMemiorObject: %d",index);
+    [database executeUpdate:@"UPDATE object SET active = ? WHERE waterfallIndex = ?",[NSNumber numberWithInt:1],[NSNumber numberWithInt:3],nil];
 }
 
 -(int)getObjectCount
@@ -158,6 +170,16 @@
     int count = 0;
     FMResultSet *results = [database executeQuery:@"select * from object"];
     while([results next]){
+        count++;
+    }
+    return count;
+}
+
+-(int)getActiveCellCount
+{
+    int count = 0;
+    FMResultSet *results = [database executeQuery:@"select * from object where active = 1"];
+    while ([results next]) {
         count++;
     }
     return count;
@@ -181,7 +203,7 @@
 // check if object exists in database
 -(BOOL)checkForObject:(NSString *)object
 {
-    NSString *objectFixed = [NSString stringWithFormat:@"%ld",([object integerValue]-1)];
+    NSString *objectFixed = [NSString stringWithFormat:@"%d",(int)([object integerValue]-1)];
     FMResultSet *result = [database executeQuery:[NSString stringWithFormat:@"select name from object where waterfallIndex = %@",objectFixed]];
     if ([result next]) {
         return true;

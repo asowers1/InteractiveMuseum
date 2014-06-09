@@ -26,8 +26,9 @@
     if(!_displayImage){
         _displayImage = [[UIImageView alloc] initWithFrame:self.contentView.bounds];
         _displayImage.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-        _displayImage.backgroundColor = [UIColor whiteColor];
-        //_displayImage.contentMode = UIViewContentModeScaleAspectFit;
+        _displayImage.backgroundColor = [UIColor clearColor];
+        _displayImage.contentMode = UIViewContentModeScaleAspectFit;
+        
     }
     return _displayImage;
 }
@@ -40,6 +41,7 @@
         IMMeniorManager * data = [[IMMeniorManager alloc] init];
         [data openDatabase];
         NSString * imgRef = [data getObjectFromIndex:[displayString intValue]];
+        NSLog(@"SET: %@",imgRef);
         _displayImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpg",imgRef]];
         [data closeDatabase];
         

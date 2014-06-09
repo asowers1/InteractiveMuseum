@@ -12,7 +12,7 @@
 {
     FMDatabase *database;
 }
--(void)addMemiorObject;
+-(void)addMemiorObject:(int)index;
 -(void)buildInitialDatabase;
 -(NSString *)getObjectFromIndex:(int)index;
 -(void)setSelectionIndex:(NSString *)object;
@@ -23,6 +23,7 @@
 -(BOOL)closeDatabase;
 -(BOOL)checkForObject:(NSString *)object;
 -(int)getObjectCount;
+-(int)getActiveCellCount;
 @property(strong, nonatomic) NSString * query;
 
 @end

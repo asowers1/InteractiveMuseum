@@ -14,8 +14,10 @@
     UIImageView *objectImageView;
     UITapGestureRecognizer *tap;
     BOOL isFullScreen;
+    BOOL imageExploded;
     CGRect prevFrame;
     CGRect newFrame;
+
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;

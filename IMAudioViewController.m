@@ -8,6 +8,9 @@
 
 #import "IMAudioViewController.h"
 #import "FFCircularProgressView.h"
+#import "IMMeniorManager.h"
+
+
 @interface IMAudioViewController ()
 {
     AVAudioRecorder *recorder;
@@ -64,7 +67,7 @@
     self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:116.0/255.0 green:191.0/255.0 blue:185.0/255.0 alpha:1.0];
     count=0;
     
-    self.circularPV = [[FFCircularProgressView alloc] initWithFrame:CGRectMake(40, 40, 80, 80)];
+    self.circularPV = [[FFCircularProgressView alloc] initWithFrame:CGRectMake(40, 40, 160, 160)];
     _circularPV.center = self.view.center;
     
 
@@ -121,41 +124,45 @@
                                                      selector:@selector(counter)
                                                      userInfo:nil
                                                       repeats:1];
-        [self.view addSubview:_circularPV];
+//        [self.view addSubview:_circularPV];
         
-        [_circularPV startSpinProgressBackgroundLayer];
-        
-        double delayInSeconds = 2.5;
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-        dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(void){
-            for (float i=0; i<1.1; i+=0.01F) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [_circularPV setProgress:i];
-                });
-                usleep(100000);
-            }
-            
-            double delayInSeconds = 2.0;
-            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-                [_circularPV setProgress:0];
-            });
-        });
-        
-        delayInSeconds = 2;
-        popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
-        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-            [_circularPV stopSpinProgressBackgroundLayer];
-        });
+//        [_circularPV startSpinProgressBackgroundLayer];
+//        __block BOOL cancelled = NO;
+//        double delayInSeconds = 2.5;
+//        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+//        dispatch_after(popTime, dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^(void){
+//                for (float i=0; i<1.1; i+=0.01F) {
+//                    while (!cancelled) {
+//                    dispatch_async(dispatch_get_main_queue(), ^{
+//                        [_circularPV setProgress:i];
+//                    });
+//                    usleep(10000);
+//                        
+//                    }
+//                }
+//            
+//            double delayInSeconds = 2.0;
+//            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+//            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//                [_circularPV setProgress:0];
+//            });
+//            
+//        });
+//        cancelledPtr = &cancelled;
+//        delayInSeconds = 2;
+//        popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+//        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//            [_circularPV stopSpinProgressBackgroundLayer];
+//        });
         // Start recording
         [recorder record];
-        [recordPauseButton setTitle:@"Pause" forState:UIControlStateNormal];
+        [recordPauseButton setTitle:@"Stop" forState:UIControlStateNormal];
         
     } else {
         
         // Pause recording
-        [self pauseCounter];
-        [recorder pause];
+        [self stopLogic];
+        [recorder stop];
         [recordPauseButton setTitle:@"Record" forState:UIControlStateNormal];
     }
     
@@ -169,10 +176,11 @@
 
 - (void)stopLogic
 {
-    [recorder stop];
-    [self resetCounter];
-    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-    [audioSession setActive:NO error:nil];
+    if (cancelledPtr)
+    {
+
+    }
+    
 }
 
 - (IBAction)playTapped:(id)sender {
@@ -186,23 +194,60 @@
 #pragma mark - AVAudioRecorderDelegate
 
 - (void) audioRecorderDidFinishRecording:(AVAudioRecorder *)avrecorder successfully:(BOOL)flag{
+    
     [recordPauseButton setTitle:@"Record" forState:UIControlStateNormal];
     [stopButton setEnabled:NO];
     [playButton setEnabled:YES];
+    [self finishedPlayerAlert];
+    [self resetCounter];
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession setActive:NO error:nil];
+    [countTicker invalidate];
+    countTicker = nil;
+    
 }
 
 #pragma mark - AVAudioPlayerDelegate
 
 - (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag{
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Done"
-                                                    message: @"Finish playing the recording!"
-                                                   delegate: nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+    [recorder stop];
 }
 
 
+#pragma mark - User audio input methods
+
+-(void)finishedPlayerAlert
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Vioce note complete"
+                                                    message: @"Would like like to save it?"
+                                                   delegate: self
+                                          cancelButtonTitle:@"Redo?"
+                                          otherButtonTitles:@"Fished",
+                          nil];
+    [alert show];
+}
+
+-(void) alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    
+    //u need to change 0 to other value(,1,2,3) if u have more buttons.then u can check which button was pressed.
+    
+    if (buttonIndex == 0) {
+        
+        [self recordPauseLogic];
+        
+        
+    }else if(buttonIndex == 1){
+        // save file with memoir object reference
+        IMMeniorManager *data = [[IMMeniorManager alloc] init];
+        [data openDatabase];
+        NSString *currentObject = [data getSelectionIndex];
+        //save audio data with reference to currentObject
+        //TO DO
+    }
+    
+    
+    
+}
 /*
 #pragma mark - Navigation
 

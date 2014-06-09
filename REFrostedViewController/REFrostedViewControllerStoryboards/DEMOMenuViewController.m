@@ -112,7 +112,7 @@
     // set number of columns from number of items
     IMMeniorManager * data = [[IMMeniorManager alloc] init];
     [data openDatabase];
-    CELL_COUNT = [data getObjectCount];
+    CELL_COUNT = [data getActiveCellCount];
     [data closeDatabase];
 }
 

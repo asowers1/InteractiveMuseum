@@ -9,9 +9,10 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface IMAudioViewController : UIViewController<AVAudioRecorderDelegate, AVAudioPlayerDelegate>{
+@interface IMAudioViewController : UIViewController<AVAudioRecorderDelegate, AVAudioPlayerDelegate, UIAlertViewDelegate>{
     NSInteger count;
     NSTimer *countTicker;
+    BOOL*   cancelledPtr;
 }
 
 @property (weak, nonatomic) IBOutlet UIButton *recordPauseButton;
@@ -19,9 +20,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 
-- (IBAction)recordPauseTapped:(id)sender;
-- (IBAction)stopTapped:(id)sender;
-- (IBAction)playTapped:(id)sender;
+//- (IBAction)recordPauseTapped:(id)sender;
+//- (IBAction)stopTapped:(id)sender;
+//- (IBAction)playTapped:(id)sender;
 
 
 @end
